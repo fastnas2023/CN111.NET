@@ -1,0 +1,35 @@
+{
+  "name": "aivent-clone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "compare:visual": "playwright test tests/visual/compare-original-vs-clone.spec.ts"
+  },
+  "dependencies": {
+    "banli-ui": "file:vendor/banli-ui",
+    "framer-motion": "^12.38.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-fast-marquee": "^1.6.5",
+    "swiper": "^12.1.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^20",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "sass": "^1.99.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+  overflow: hidden;
+}
+
+.video,
+.fallback,
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 无视频资源时的最小可用兜底背景 */
+.fallback {
+  background:
+    radial-gradient(1000px 600px at 20% 10%, rgba(124, 58, 237, 0.35), transparent),
+    radial-gradient(900px 500px at 80% 60%, rgba(34, 197, 94, 0.22), transparent),
+    linear-gradient(180deg, #0b0f1f 0%, #090c18 100%);
+}
+
+.overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 15, 31, 0.25) 0%,
+    rgba(11, 15, 31, 0.75) 70%,
+    rgba(11, 15, 31, 0.95) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+

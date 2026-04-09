@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Manrope（本地优先）
+   - 默认使用本地字体文件（若存在）
+   - 若集成方想用 Google Fonts，请在宿主页面额外添加：
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+*/
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope/Manrope-Variable.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family:
+    'Manrope',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+  @apply bg-banli-bg text-banli-text antialiased;
+}
+
+/* Motion tokens（统一动效时长/缓动）
+   组件层尽量只使用 transform/opacity 动效，避免 layout 抖动。 */
+:root {
+  /* BanLi theme tokens (light mode default). */
+  --banli-bg: #ffffff;
+  --banli-panel: #f8fafc;
+  --banli-primary: #7c3aed;
+  --banli-secondary: #22d3ee;
+  --banli-text: rgba(11, 18, 32, 0.92);
+  --banli-muted: rgba(11, 18, 32, 0.62);
+  --banli-border: rgba(11, 18, 32, 0.12);
+
+  /* BanLi motion tokens */
+  --banli-motion-duration-fast: 150ms;
+  --banli-motion-duration: 220ms;
+  --banli-motion-duration-slow: 320ms;
+  --banli-motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --banli-motion-ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  --aivent-motion-duration-fast: 150ms;
+  --aivent-motion-duration: 220ms;
+  --aivent-motion-duration-slow: 320ms;
+  --aivent-motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --aivent-motion-ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* Dark mode (opt-in via <html class="dark">). Keep current BanLi UI look here. */
+.dark {
+  --banli-bg: #050816;
+  --banli-panel: #0b1024;
+  --banli-primary: #7c3aed;
+  --banli-secondary: #22d3ee;
+  --banli-text: rgba(255, 255, 255, 0.86);
+  --banli-muted: rgba(255, 255, 255, 0.65);
+  --banli-border: rgba(255, 255, 255, 0.12);
+}
+
+/* 全局动效降级开关（由 AiventMotionProvider 写入 data-aivent-motion） */
+:root[data-aivent-motion='off'] *,
+:root[data-aivent-motion='off'] *::before,
+:root[data-aivent-motion='off'] *::after {
+  animation: none !important;
+  transition-duration: 0ms !important;
+  scroll-behavior: auto !important;
+}
+
+:root[data-aivent-motion='reduced'] *,
+:root[data-aivent-motion='reduced'] *::before,
+:root[data-aivent-motion='reduced'] *::after {
+  animation-duration: 1ms !important;
+  transition-duration: 50ms !important;
+  scroll-behavior: auto !important;
+}

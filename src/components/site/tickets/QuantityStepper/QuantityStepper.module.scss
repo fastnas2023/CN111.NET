@@ -1,0 +1,64 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--aivent-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--aivent-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--aivent-dur-1) var(--aivent-ease),
+    opacity var(--aivent-dur-1) var(--aivent-ease);
+
+  &:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+}
+
+.value {
+  min-width: 28px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--aivent-text);
+}
+
+.size_sm {
+  .btn {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+}
+
+.size_md {
+  .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .value {
+    font-size: 15px;
+  }
+}
+

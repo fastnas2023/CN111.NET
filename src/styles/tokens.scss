@@ -1,0 +1,24 @@
+:root {
+  /* colors (dark-first, 与模板一致) */
+  --aivent-bg: #0b0f1f;
+  --aivent-panel: #11162b;
+  --aivent-text: rgba(255, 255, 255, 0.92);
+  --aivent-text-muted: rgba(255, 255, 255, 0.65);
+  --aivent-border: rgba(255, 255, 255, 0.12);
+  --aivent-primary: #7c3aed; /* 可按 banli-react-ui 的 primary 对齐 */
+  --aivent-accent: #22c55e;
+
+  /* radius */
+  --aivent-r-sm: 10px;
+  --aivent-r-md: 16px;
+  --aivent-r-lg: 22px;
+
+  /* shadow */
+  --aivent-shadow-1: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  /* motion */
+  --aivent-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --aivent-dur-1: 200ms;
+  --aivent-dur-2: 400ms;
+}
+

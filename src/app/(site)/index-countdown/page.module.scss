@@ -1,0 +1,185 @@
+.hero {
+  min-height: calc(100vh - 64px);
+}
+
+.heroBg {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: stretch;
+}
+
+.heroContent {
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 20px 28px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.heroInner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.copy {
+  max-width: 56ch;
+}
+
+.kicker {
+  margin: 0 0 12px;
+  color: var(--aivent-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-size: clamp(34px, 4vw, 60px);
+  line-height: 1.03;
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  color: var(--aivent-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: var(--aivent-r-md);
+  border: 1px solid var(--aivent-border);
+  transition: transform var(--aivent-dur-1) var(--aivent-ease),
+    background var(--aivent-dur-1) var(--aivent-ease);
+  will-change: transform;
+}
+
+.primaryButton {
+  background: var(--aivent-primary);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.countdownPanel {
+  justify-self: end;
+  width: min(520px, 100%);
+  padding: 22px 20px 18px;
+  border-radius: var(--aivent-r-lg);
+  background: rgba(17, 22, 43, 0.72);
+  border: 1px solid var(--aivent-border);
+  box-shadow: var(--aivent-shadow-1);
+  backdrop-filter: blur(10px);
+}
+
+.countdownHeading {
+  font-size: 14px;
+  color: var(--aivent-text-muted);
+  margin: 0 0 12px;
+}
+
+.countdownXL {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.countdownXL [data-segment] {
+  padding: 16px 10px;
+  border-radius: var(--aivent-r-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.countdownXL [data-value] {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 750;
+  line-height: 1;
+}
+
+.countdownXL [data-label] {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--aivent-text-muted);
+}
+
+.marqueeStack {
+  width: 100%;
+  padding: 0 0 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.marqueeBar,
+.marqueeBarAlt {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 15, 31, 0.35);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.marqueeBarAlt {
+  background: rgba(11, 15, 31, 0.22);
+}
+
+.marquee {
+  padding: 10px 0;
+}
+
+.marqueeText {
+  display: inline-block;
+  padding: 0 18px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-top: 54px;
+  }
+
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+
+  .countdownPanel {
+    justify-self: start;
+  }
+}
+
