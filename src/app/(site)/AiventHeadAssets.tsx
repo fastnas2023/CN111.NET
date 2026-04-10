@@ -37,6 +37,17 @@ header #logo img.logo-mobile{
   height: 44px;
   width: auto;
 }
+
+/* 兜底：当用户强制桌面版(viewMode=desktop)但 viewport 很窄时，模板会进入“移动菜单”样式，
+   原模板这里未给 #mainmenu 设置不透明背景，导致能透出 header 的 logo，看起来像“logo 串到菜单里”。 */
+@media (max-width: 992px){
+  #mainmenu{
+    background: rgba(17, 22, 43, 0.96);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 16px;
+    padding-right: 12px;
+  }
+}
           `.trim(),
         }}
       />
