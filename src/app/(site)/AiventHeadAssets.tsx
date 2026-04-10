@@ -17,6 +17,7 @@ export function AiventHeadAssets() {
         href="/aivent/css/bootstrap.min.css"
         precedence="aivent"
       />
+      <link rel="stylesheet" href="/aivent/css/swiper.css" precedence="aivent" />
       <link rel="stylesheet" href="/aivent/css/vendors.css" precedence="aivent" />
       <link rel="stylesheet" href="/aivent/css/style.css" precedence="aivent" />
       <link
