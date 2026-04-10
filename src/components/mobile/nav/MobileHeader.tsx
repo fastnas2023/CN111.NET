@@ -6,6 +6,8 @@ import Link from "next/link";
 
 import { assets } from "@/lib/assets";
 import { routes } from "@/lib/routes";
+import { useI18n } from "@/i18n/client";
+import { withLocale } from "@/i18n/paths";
 
 import styles from "./MobileHeader.module.scss";
 import { MobileMenuDrawer } from "./MobileMenuDrawer";
@@ -13,26 +15,31 @@ import { MobileMenuDrawer } from "./MobileMenuDrawer";
 export function MobileHeader() {
   const [open, setOpen] = React.useState(false);
   const close = React.useCallback(() => setOpen(false), []);
+  const { locale, t } = useI18n();
 
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link className={styles.brand} href={routes.home} aria-label="Aivent Home">
+        <Link
+          className={styles.brand}
+          href={withLocale(locale, routes.home)}
+          aria-label={t("mobile.header.brandAria", { brand: t("brand.name") })}
+        >
           <Image
             className={styles.brandLogo}
             src={assets.logo}
-            alt="Aivent"
+            alt={t("brand.name")}
             width={32}
             height={32}
             priority
           />
-          <span className={styles.brandText}>AIVENT</span>
+          <span className={styles.brandText}>{t("brand.name")}</span>
         </Link>
 
         <button
           type="button"
           className={styles.menuButton}
-          aria-label="打开菜单"
+          aria-label={t("mobile.menu.open")}
           aria-expanded={open}
           onClick={() => setOpen(true)}
         >

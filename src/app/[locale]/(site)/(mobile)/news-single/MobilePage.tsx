@@ -4,9 +4,14 @@ import React from "react";
 import { Button } from "banli-ui";
 
 import { MobileAppShell } from "@/components/mobile/layout/MobileAppShell";
+import { useI18n } from "@/i18n/client";
+import { withLocale } from "@/i18n/paths";
+import { routes } from "@/lib/routes";
 import styles from "../_shared/MobileLanding.module.scss";
 
 export function MobileNewsSinglePage() {
+  const { locale } = useI18n();
+
   return (
     <MobileAppShell>
       <div className={styles.page}>
@@ -17,12 +22,20 @@ export function MobileNewsSinglePage() {
           </p>
 
           <div className={styles.ctaRow}>
-            <form action="/news" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.news)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="primary" size="md" className={styles.ctaButton}>
                 返回新闻列表
               </Button>
             </form>
-            <form action="/tickets" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.tickets)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="secondary" size="md" className={styles.ctaButton}>
                 现在购票
               </Button>

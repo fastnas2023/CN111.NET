@@ -4,56 +4,63 @@ import React from "react";
 import { Button } from "banli-ui";
 
 import { MobileAppShell } from "@/components/mobile/layout/MobileAppShell";
+import { useI18n } from "@/i18n/client";
+import { withLocale } from "@/i18n/paths";
+import { routes } from "@/lib/routes";
 import styles from "../_shared/MobileLanding.module.scss";
 
 export function MobileTicketsPage() {
+  const { locale, t } = useI18n();
+
   return (
     <MobileAppShell>
       <div className={styles.page}>
         <header className={styles.hero}>
-          <h1 className={styles.h1}>Tickets · 移动端购票</h1>
-          <p className={styles.lede}>
-            为小屏设备优化的购票入口：先看票种，再确认权益与规则，最后一步完成下单。
-          </p>
+          <h1 className={styles.h1}>{t("mobile.tickets.title")}</h1>
+          <p className={styles.lede}>{t("mobile.tickets.lede")}</p>
 
           <div className={styles.ctaRow}>
-            <form action="/tickets-2" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.tickets2)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="primary" size="md" className={styles.ctaButton}>
-                查看更多票种
+                {t("mobile.tickets.cta.moreTickets")}
               </Button>
             </form>
-            <form action="/contact" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.contact)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="secondary" size="md" className={styles.ctaButton}>
-                票务咨询
+                {t("mobile.tickets.cta.contact")}
               </Button>
             </form>
           </div>
         </header>
 
         <section className={styles.section}>
-          <h2 className={styles.h2}>票种速览</h2>
+          <h2 className={styles.h2}>{t("mobile.tickets.section.overview")}</h2>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <p className={styles.cardTitle}>Standard Pass</p>
-              <p className={styles.cardBody}>
-                适合首次参会：含主会场席位、会后资料包与展区通行。
-              </p>
+              <p className={styles.cardTitle}>{t("mobile.tickets.overview.1.title")}</p>
+              <p className={styles.cardBody}>{t("mobile.tickets.overview.1.body")}</p>
             </div>
             <div className={styles.card}>
-              <p className={styles.cardTitle}>VIP Pass</p>
-              <p className={styles.cardBody}>
-                更好的座位与快速通道；含讲者交流/晚宴等增值权益（以现场公告为准）。
-              </p>
+              <p className={styles.cardTitle}>{t("mobile.tickets.overview.2.title")}</p>
+              <p className={styles.cardBody}>{t("mobile.tickets.overview.2.body")}</p>
             </div>
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.h2}>购票须知</h2>
+          <h2 className={styles.h2}>{t("mobile.tickets.section.notice")}</h2>
           <ul className={styles.list}>
-            <li>请使用常用邮箱/手机号下单，便于收取电子票与通知。</li>
-            <li>发票/对公信息可在 Contact 留言，我们会人工协助。</li>
-            <li>如需改签/退票，以活动最终规则为准。</li>
+            <li>{t("mobile.tickets.notice.1")}</li>
+            <li>{t("mobile.tickets.notice.2")}</li>
+            <li>{t("mobile.tickets.notice.3")}</li>
           </ul>
         </section>
       </div>

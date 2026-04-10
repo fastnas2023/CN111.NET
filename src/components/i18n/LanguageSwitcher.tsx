@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { SUPPORTED_LOCALES, type SupportedLocale } from "@/i18n/locales";
 import { useI18n } from "@/i18n/client";
+import { stripLocale } from "@/i18n/paths";
 
 const LABEL_KEY: Record<SupportedLocale, string> = {
   "zh-CN": "lang.zhCN",
@@ -17,15 +18,6 @@ const LABEL_KEY: Record<SupportedLocale, string> = {
   "ru-RU": "lang.ruRU",
   "ar-SA": "lang.arSA",
 };
-
-function stripLocale(pathname: string) {
-  for (const loc of SUPPORTED_LOCALES) {
-    const prefix = `/${loc}`;
-    if (pathname === prefix) return "/";
-    if (pathname.startsWith(prefix + "/")) return pathname.slice(prefix.length);
-  }
-  return pathname;
-}
 
 export function LanguageSwitcher({ variant }: { variant: "desktop" | "mobile" }) {
   const pathname = usePathname() ?? "/";
@@ -60,4 +52,3 @@ export function LanguageSwitcher({ variant }: { variant: "desktop" | "mobile" })
     </div>
   );
 }
-

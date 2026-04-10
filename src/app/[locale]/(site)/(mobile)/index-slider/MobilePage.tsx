@@ -4,9 +4,14 @@ import React from "react";
 import { Button } from "banli-ui";
 
 import { MobileAppShell } from "@/components/mobile/layout/MobileAppShell";
+import { useI18n } from "@/i18n/client";
+import { withLocale } from "@/i18n/paths";
+import { routes } from "@/lib/routes";
 import styles from "../_shared/MobileLanding.module.scss";
 
 export function MobileIndexSliderPage() {
+  const { locale } = useI18n();
+
   return (
     <MobileAppShell>
       <div className={styles.page}>
@@ -17,12 +22,20 @@ export function MobileIndexSliderPage() {
           </p>
 
           <div className={styles.ctaRow}>
-            <form action="/tickets" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.tickets)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="primary" size="md" className={styles.ctaButton}>
                 立即购票
               </Button>
             </form>
-            <form action="/contact" method="get" className={styles.ctaForm}>
+            <form
+              action={withLocale(locale, routes.contact)}
+              method="get"
+              className={styles.ctaForm}
+            >
               <Button type="submit" variant="secondary" size="md" className={styles.ctaButton}>
                 商务合作
               </Button>

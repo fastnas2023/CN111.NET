@@ -8,22 +8,23 @@ import { Icon } from "banli-ui";
 import { routes } from "@/lib/routes";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { useI18n } from "@/i18n/client";
+import { withLocale } from "@/i18n/paths";
 
 import styles from "./MobileMenuDrawer.module.scss";
 
-type NavItem = { label: string; href: string };
+type NavItem = { labelKey: string; href: string };
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: routes.home },
-  { label: "Index Slider", href: routes.indexSlider },
-  { label: "Index Static Background", href: routes.indexStaticBackground },
-  { label: "Index Slider Text", href: routes.indexSliderText },
-  { label: "Index Countdown", href: routes.indexCountdown },
-  { label: "Tickets", href: routes.tickets },
-  { label: "Tickets 2", href: routes.tickets2 },
-  { label: "News", href: routes.news },
-  { label: "News Single", href: routes.newsSingle },
-  { label: "Contact", href: routes.contact },
+  { labelKey: "nav.home", href: routes.home },
+  { labelKey: "nav.indexSlider", href: routes.indexSlider },
+  { labelKey: "nav.indexStaticBackground", href: routes.indexStaticBackground },
+  { labelKey: "nav.indexSliderText", href: routes.indexSliderText },
+  { labelKey: "nav.indexCountdown", href: routes.indexCountdown },
+  { labelKey: "nav.tickets", href: routes.tickets },
+  { labelKey: "nav.tickets2", href: routes.tickets2 },
+  { labelKey: "nav.news", href: routes.news },
+  { labelKey: "nav.newsSingle", href: routes.newsSingle },
+  { labelKey: "nav.contact", href: routes.contact },
 ];
 
 function readCookie(name: string): string | undefined {
@@ -39,7 +40,7 @@ export type MobileMenuDrawerProps = {
 export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
   const pathname = usePathname();
   const isDev = process.env.NODE_ENV === "development";
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const [currentViewMode, setCurrentViewMode] = React.useState<
     "auto" | "mobile" | "desktop"
   >("auto");
@@ -85,40 +86,42 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
       <button
         type="button"
         className={styles.backdrop}
-        aria-label="关闭菜单"
+        aria-label={t("mobile.menu.close")}
         onClick={onClose}
       />
 
-      <aside className={styles.panel} aria-label="Mobile menu">
+      <aside className={styles.panel} aria-label={t("mobile.menu.ariaLabel")}>
         <div className={styles.panelHeader}>
-          <div className={styles.title}>Menu</div>
+          <div className={styles.title}>{t("mobile.menu.title")}</div>
           <button
             type="button"
             className={styles.closeButton}
-            aria-label="关闭菜单"
+            aria-label={t("mobile.menu.close")}
             onClick={onClose}
           >
             <Icon name="close" size="md" />
           </button>
         </div>
 
-        <nav className={styles.nav} aria-label="Mobile navigation">
+        <nav className={styles.nav} aria-label={t("mobile.menu.navAriaLabel")}>
           {NAV_ITEMS.map((item) => {
+            const href = withLocale(locale, item.href);
+            const isRoot = href === `/${locale}`;
             const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname?.startsWith(item.href);
+              pathname === href ||
+              pathname === `${href}/` ||
+              (!isRoot && pathname?.startsWith(href + "/"));
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={href}
                 className={[
                   styles.navLink,
                   active ? styles.navLinkActive : "",
                 ].join(" ")}
                 onClick={onClose}
               >
-                <span>{item.label}</span>
+                <span>{t(item.labelKey)}</span>
                 <Icon name="chevron-right" size="sm" />
               </Link>
             );
@@ -132,7 +135,7 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
           {isDev ? (
             <>
               <div className={styles.devLabel} style={{ marginTop: 14 }}>
-                View Mode (dev)
+                {t("mobile.viewMode.title")}
               </div>
               <div className={styles.viewModeGrid}>
                 {(["auto", "mobile", "desktop"] as const).map((mode) => (
@@ -145,7 +148,7 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
                     ].join(" ")}
                     onClick={() => setViewMode(mode)}
                   >
-                    {mode}
+                    {t(`mobile.viewMode.${mode}`)}
                   </button>
                 ))}
               </div>
