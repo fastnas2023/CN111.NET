@@ -1,10 +1,23 @@
 import { getAiventTemplateBodyHtml } from "@/lib/aiventTemplate";
+import { createT, getMessages } from "@/i18n/server";
+import type { SupportedLocale } from "@/i18n/locales";
 import ResponsiveRoute from "../_routing/ResponsiveRoute";
 import DesktopTemplateShell from "../_routing/DesktopTemplateShell";
 import { MobileIndexSliderPage } from "../(mobile)/index-slider/MobilePage";
 
-export default async function Page() {
-  const html = await getAiventTemplateBodyHtml("index-slider.html");
+export default async function Page(props: {
+  params: Promise<{ locale: SupportedLocale }>;
+}) {
+  const { locale } = await props.params;
+  const messages = await getMessages(locale);
+  const t = createT(messages);
+
+  const html = await getAiventTemplateBodyHtml({
+    templateFileName: "index-slider.html",
+    locale,
+    pageKey: "index-slider",
+    t,
+  });
   return (
     <ResponsiveRoute
       desktop={

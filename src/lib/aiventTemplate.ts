@@ -1,19 +1,22 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import type { SupportedLocale } from "@/i18n/locales";
+import { applyDesktopI18n, type DesktopPageKey } from "@/i18n/aiventDesktop";
+
 type RewriteRule = { from: string; to: string };
 
 const LINK_REWRITES: RewriteRule[] = [
-  { from: 'href="index.html"', to: 'href="/"' },
-  { from: 'href="index-slider.html"', to: 'href="/index-slider"' },
-  { from: 'href="index-static-background.html"', to: 'href="/index-static-background"' },
-  { from: 'href="index-slider-text.html"', to: 'href="/index-slider-text"' },
-  { from: 'href="index-countdown.html"', to: 'href="/index-countdown"' },
-  { from: 'href="news.html"', to: 'href="/news"' },
-  { from: 'href="news-single.html"', to: 'href="/news-single"' },
-  { from: 'href="contact.html"', to: 'href="/contact"' },
-  { from: 'href="tickets.html"', to: 'href="/tickets"' },
-  { from: 'href="tickets-2.html"', to: 'href="/tickets-2"' },
+  { from: 'href="index.html"', to: "" },
+  { from: 'href="index-slider.html"', to: "/index-slider" },
+  { from: 'href="index-static-background.html"', to: "/index-static-background" },
+  { from: 'href="index-slider-text.html"', to: "/index-slider-text" },
+  { from: 'href="index-countdown.html"', to: "/index-countdown" },
+  { from: 'href="news.html"', to: "/news" },
+  { from: 'href="news-single.html"', to: "/news-single" },
+  { from: 'href="contact.html"', to: "/contact" },
+  { from: 'href="tickets.html"', to: "/tickets" },
+  { from: 'href="tickets-2.html"', to: "/tickets-2" },
 ];
 
 function rewriteAssetPaths(html: string) {
@@ -35,8 +38,12 @@ function rewriteAssetPaths(html: string) {
   return out;
 }
 
-function rewriteLinks(html: string) {
-  return LINK_REWRITES.reduce((acc, r) => acc.replaceAll(r.from, r.to), html);
+function rewriteLinks(html: string, locale: SupportedLocale) {
+  const prefix = `/${locale}`;
+  return LINK_REWRITES.reduce(
+    (acc, r) => acc.replaceAll(r.from, `href="${prefix}${r.to}"`),
+    html,
+  );
 }
 
 function rewriteLogo(html: string) {
@@ -66,13 +73,20 @@ function rewriteContactFormAction(html: string) {
  * - Rewrite in-site links (.html -> Next routes)
  * - Rewrite logo src to banli-ui logo path
  */
-export async function getAiventTemplateBodyHtml(templateFileName: string) {
-  const filePath = path.join(process.cwd(), "public", "aivent", templateFileName);
+export async function getAiventTemplateBodyHtml(opts: {
+  templateFileName: string;
+  locale: SupportedLocale;
+  pageKey: DesktopPageKey;
+  t: (k: string) => string;
+}) {
+  const filePath = path.join(process.cwd(), "public", "aivent", opts.templateFileName);
   const raw = await fs.readFile(filePath, "utf8");
 
   const wrapperStart = raw.indexOf('<div id="wrapper">');
   if (wrapperStart === -1) {
-    throw new Error(`Template "${templateFileName}" missing <div id="wrapper">`);
+    throw new Error(
+      `Template "${opts.templateFileName}" missing <div id="wrapper">`,
+    );
   }
 
   // Scripts begin after this marker in all template pages we downloaded.
@@ -88,11 +102,17 @@ export async function getAiventTemplateBodyHtml(templateFileName: string) {
   let html = raw.slice(wrapperStart, sliceEnd).trim();
 
   html = rewriteAssetPaths(html);
-  html = rewriteLinks(html);
+  html = rewriteLinks(html, opts.locale);
   html = rewriteLogo(html);
-  if (templateFileName === "contact.html") {
+  if (opts.templateFileName === "contact.html") {
     html = rewriteContactFormAction(html);
   }
+  html = applyDesktopI18n({
+    html,
+    page: opts.pageKey,
+    t: opts.t,
+    locale: opts.locale,
+  });
   return html;
 }
 
