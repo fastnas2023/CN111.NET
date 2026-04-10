@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { Icon } from "banli-ui";
 
 import { routes } from "@/lib/routes";
+import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
+import { useI18n } from "@/i18n/client";
 
 import styles from "./MobileMenuDrawer.module.scss";
 
@@ -37,6 +39,7 @@ export type MobileMenuDrawerProps = {
 export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
   const pathname = usePathname();
   const isDev = process.env.NODE_ENV === "development";
+  const { t } = useI18n();
   const [currentViewMode, setCurrentViewMode] = React.useState<
     "auto" | "mobile" | "desktop"
   >("auto");
@@ -122,26 +125,33 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
           })}
         </nav>
 
-        {isDev ? (
-          <div className={styles.footer}>
-            <div className={styles.devLabel}>View Mode (dev)</div>
-            <div className={styles.viewModeGrid}>
-              {(["auto", "mobile", "desktop"] as const).map((mode) => (
-                <button
-                  key={mode}
-                  type="button"
-                  className={[
-                    styles.viewModeButton,
-                    currentViewMode === mode ? styles.viewModeButtonActive : "",
-                  ].join(" ")}
-                  onClick={() => setViewMode(mode)}
-                >
-                  {mode}
-                </button>
-              ))}
-            </div>
-          </div>
-        ) : null}
+        <div className={styles.footer}>
+          <div className={styles.devLabel}>{t("lang.label")}</div>
+          <LanguageSwitcher variant="mobile" />
+
+          {isDev ? (
+            <>
+              <div className={styles.devLabel} style={{ marginTop: 14 }}>
+                View Mode (dev)
+              </div>
+              <div className={styles.viewModeGrid}>
+                {(["auto", "mobile", "desktop"] as const).map((mode) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    className={[
+                      styles.viewModeButton,
+                      currentViewMode === mode ? styles.viewModeButtonActive : "",
+                    ].join(" ")}
+                    onClick={() => setViewMode(mode)}
+                  >
+                    {mode}
+                  </button>
+                ))}
+              </div>
+            </>
+          ) : null}
+        </div>
       </aside>
     </div>
   );

@@ -22,3 +22,24 @@ a {
   box-sizing: border-box;
 }
 
+.cn111-lang-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cn111-lang-switcher--desktop {
+  position: fixed;
+  z-index: 9999;
+  top: 12px;
+  right: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(17, 22, 43, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { AiventBodyClass } from "../AiventBodyClass";
 import { AiventScriptsServer } from "../AiventScriptsServer";
+import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { ViewportViewModeSync } from "@/components/mobile/ViewportViewModeSync";
 
 /**
@@ -21,6 +22,7 @@ export default function DesktopTemplateShell({
 }) {
   return (
     <>
+      <LanguageSwitcher variant="desktop" />
       <AiventBodyClass />
       <ViewportViewModeSync />
       {children}
