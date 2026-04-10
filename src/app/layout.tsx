@@ -12,8 +12,8 @@ import { AppProviders } from "@/components/providers/AppProviders";
 import { AiventHeadAssets } from "./(site)/AiventHeadAssets";
 
 export const metadata: Metadata = {
-  title: "Aivent Clone",
-  description: "Aivent HTML clone (Next.js + banli-react-ui + SCSS)",
+  title: "CN111 Website",
+  description: "CN111 Website (Next.js + banli-ui + SCSS)",
 };
 
 export default function RootLayout({
