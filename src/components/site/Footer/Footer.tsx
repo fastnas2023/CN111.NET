@@ -3,7 +3,7 @@ import styles from "./Footer.module.scss";
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.inner}>© {new Date().getFullYear()} CN111 Website</div>
+      <div className={styles.inner}>© {new Date().getFullYear()} CN111.NET</div>
     </footer>
   );
 }
