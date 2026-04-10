@@ -1,0 +1,24 @@
+{
+  "brand.name": "CN111.NET",
+  "nav.home": "الرئيسية",
+  "nav.indexSlider": "الرئيسية (منزلق)",
+  "nav.indexStaticBackground": "الرئيسية (خلفية ثابتة)",
+  "nav.indexSliderText": "الرئيسية (نص المنزلق)",
+  "nav.indexCountdown": "الرئيسية (العدّ التنازلي)",
+  "nav.tickets": "التذاكر",
+  "nav.tickets2": "التذاكر 2",
+  "nav.news": "الأخبار",
+  "nav.newsSingle": "خبر (تفاصيل)",
+  "nav.contact": "اتصل بنا",
+  "lang.label": "اللغة",
+  "lang.zhCN": "中文",
+  "lang.enUS": "English",
+  "lang.deDE": "Deutsch",
+  "lang.frFR": "Français",
+  "lang.jaJP": "日本語",
+  "lang.koKR": "한국어",
+  "lang.ruRU": "Русский",
+  "lang.arSA": "العربية",
+  "footer.copyright": "© {year} CN111.NET"
+}
+

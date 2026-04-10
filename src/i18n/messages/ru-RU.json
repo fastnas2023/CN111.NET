@@ -1,0 +1,24 @@
+{
+  "brand.name": "CN111.NET",
+  "nav.home": "Главная",
+  "nav.indexSlider": "Главная (Слайдер)",
+  "nav.indexStaticBackground": "Главная (Статичный фон)",
+  "nav.indexSliderText": "Главная (Текст слайдера)",
+  "nav.indexCountdown": "Главная (Обратный отсчёт)",
+  "nav.tickets": "Билеты",
+  "nav.tickets2": "Билеты 2",
+  "nav.news": "Новости",
+  "nav.newsSingle": "Новость (Детали)",
+  "nav.contact": "Контакты",
+  "lang.label": "Язык",
+  "lang.zhCN": "中文",
+  "lang.enUS": "English",
+  "lang.deDE": "Deutsch",
+  "lang.frFR": "Français",
+  "lang.jaJP": "日本語",
+  "lang.koKR": "한국어",
+  "lang.ruRU": "Русский",
+  "lang.arSA": "العربية",
+  "footer.copyright": "© {year} CN111.NET"
+}
+

@@ -1,0 +1,24 @@
+{
+  "brand.name": "CN111.NET",
+  "nav.home": "홈",
+  "nav.indexSlider": "홈(슬라이더)",
+  "nav.indexStaticBackground": "홈(정적 배경)",
+  "nav.indexSliderText": "홈(슬라이더 텍스트)",
+  "nav.indexCountdown": "홈(카운트다운)",
+  "nav.tickets": "티켓",
+  "nav.tickets2": "티켓 2",
+  "nav.news": "뉴스",
+  "nav.newsSingle": "뉴스(상세)",
+  "nav.contact": "문의하기",
+  "lang.label": "언어",
+  "lang.zhCN": "中文",
+  "lang.enUS": "English",
+  "lang.deDE": "Deutsch",
+  "lang.frFR": "Français",
+  "lang.jaJP": "日本語",
+  "lang.koKR": "한국어",
+  "lang.ruRU": "Русский",
+  "lang.arSA": "العربية",
+  "footer.copyright": "© {year} CN111.NET"
+}
+

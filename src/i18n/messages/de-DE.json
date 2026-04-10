@@ -1,0 +1,24 @@
+{
+  "brand.name": "CN111.NET",
+  "nav.home": "Startseite",
+  "nav.indexSlider": "Startseite (Slider)",
+  "nav.indexStaticBackground": "Startseite (Statischer Hintergrund)",
+  "nav.indexSliderText": "Startseite (Slider Text)",
+  "nav.indexCountdown": "Startseite (Countdown)",
+  "nav.tickets": "Tickets",
+  "nav.tickets2": "Tickets 2",
+  "nav.news": "News",
+  "nav.newsSingle": "News (Einzelansicht)",
+  "nav.contact": "Kontakt",
+  "lang.label": "Sprache",
+  "lang.zhCN": "中文",
+  "lang.enUS": "English",
+  "lang.deDE": "Deutsch",
+  "lang.frFR": "Français",
+  "lang.jaJP": "日本語",
+  "lang.koKR": "한국어",
+  "lang.ruRU": "Русский",
+  "lang.arSA": "العربية",
+  "footer.copyright": "© {year} CN111.NET"
+}
+
