@@ -10,16 +10,14 @@ import { routes } from "@/lib/routes";
 import styles from "../_shared/MobileLanding.module.scss";
 
 export function MobileIndexStaticBackgroundPage() {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
 
   return (
     <MobileAppShell>
       <div className={styles.page}>
         <header className={styles.hero}>
-          <h1 className={styles.h1}>Index Static Background · 移动端</h1>
-          <p className={styles.lede}>
-            静态背景更适合承载稳定信息（时间/地点/主题）。移动端以卡片形式组织内容。
-          </p>
+          <h1 className={styles.h1}>{t("mobile.indexStaticBg.title")}</h1>
+          <p className={styles.lede}>{t("mobile.indexStaticBg.lede")}</p>
 
           <div className={styles.ctaRow}>
             <form
@@ -28,7 +26,7 @@ export function MobileIndexStaticBackgroundPage() {
               className={styles.ctaForm}
             >
               <Button type="submit" variant="primary" size="md" className={styles.ctaButton}>
-                购买门票
+                {t("mobile.indexStaticBg.cta.tickets")}
               </Button>
             </form>
             <form
@@ -37,36 +35,36 @@ export function MobileIndexStaticBackgroundPage() {
               className={styles.ctaForm}
             >
               <Button type="submit" variant="secondary" size="md" className={styles.ctaButton}>
-                最新动态
+                {t("mobile.indexStaticBg.cta.news")}
               </Button>
             </form>
           </div>
         </header>
 
         <section className={styles.section}>
-          <h2 className={styles.h2}>核心信息</h2>
+          <h2 className={styles.h2}>{t("mobile.indexStaticBg.section.core")}</h2>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <p className={styles.cardTitle}>时间</p>
-              <p className={styles.cardBody}>2026 / 08 / 08 - 08 / 09（示例）</p>
+              <p className={styles.cardTitle}>{t("mobile.indexStaticBg.core.1.title")}</p>
+              <p className={styles.cardBody}>{t("mobile.indexStaticBg.core.1.body")}</p>
             </div>
             <div className={styles.card}>
-              <p className={styles.cardTitle}>地点</p>
-              <p className={styles.cardBody}>City Convention Center（示例）</p>
+              <p className={styles.cardTitle}>{t("mobile.indexStaticBg.core.2.title")}</p>
+              <p className={styles.cardBody}>{t("mobile.indexStaticBg.core.2.body")}</p>
             </div>
             <div className={styles.card}>
-              <p className={styles.cardTitle}>主题</p>
-              <p className={styles.cardBody}>AI + Design + Engineering（示例）</p>
+              <p className={styles.cardTitle}>{t("mobile.indexStaticBg.core.3.title")}</p>
+              <p className={styles.cardBody}>{t("mobile.indexStaticBg.core.3.body")}</p>
             </div>
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.h2}>适合谁来</h2>
+          <h2 className={styles.h2}>{t("mobile.indexStaticBg.section.audience")}</h2>
           <ul className={styles.list}>
-            <li>想快速了解趋势与实践落地方法的人</li>
-            <li>需要建立行业人脉、寻找合作机会的人</li>
-            <li>对产品、工程、设计交叉领域感兴趣的人</li>
+            <li>{t("mobile.indexStaticBg.audience.1")}</li>
+            <li>{t("mobile.indexStaticBg.audience.2")}</li>
+            <li>{t("mobile.indexStaticBg.audience.3")}</li>
           </ul>
         </section>
       </div>
