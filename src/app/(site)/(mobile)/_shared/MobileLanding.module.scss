@@ -1,0 +1,95 @@
+/* Shared mobile landing page layout for /(site) index-* routes */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero {
+  padding: 14px;
+  border-radius: var(--aivent-r-lg);
+  border: 1px solid var(--aivent-border);
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.lede {
+  margin: 10px 0 0;
+  color: var(--aivent-text-muted);
+  line-height: 1.6;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.ctaForm {
+  flex: 1 1 140px;
+  min-width: 140px;
+}
+
+.ctaButton {
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 12px;
+  border-radius: var(--aivent-r-lg);
+  border: 1px solid var(--aivent-border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cardBody {
+  margin: 8px 0 0;
+  color: var(--aivent-text-muted);
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--aivent-text-muted);
+  line-height: 1.7;
+  font-size: 13px;
+}
+
