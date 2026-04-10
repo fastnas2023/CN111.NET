@@ -31,6 +31,29 @@ pnpm build
 pnpm start -p 3001
 ```
 
+## Deployment (BaoTa / BT Panel)
+
+Recommended setup: **PM2 (Node app) + Nginx reverse proxy**.
+
+1) **Install** in BT Panel: Nginx, Node.js (20+), PM2 Manager
+2) **Clone** and build:
+
+```bash
+cd /www/wwwroot/cn111.net
+git clone https://github.com/fastnas2023/CN111.NET.git .
+npm i -g pnpm
+pnpm install
+pnpm build
+```
+
+3) **Start** with PM2 (bind to localhost only):
+
+```bash
+pnpm start -p 3001 -H 127.0.0.1
+```
+
+4) **Nginx reverse proxy** to `http://127.0.0.1:3001` (then enable HTTPS in BT Panel)
+
 ## Optional: Visual compare / QA
 
 - Desktop visual diff: `pnpm compare:visual`

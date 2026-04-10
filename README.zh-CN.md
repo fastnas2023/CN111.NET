@@ -29,8 +29,30 @@ pnpm build
 pnpm start -p 3001
 ```
 
+## 部署（宝塔面板）
+
+推荐使用：**PM2（Node 项目）+ Nginx 反向代理**。
+
+1) 宝塔安装：Nginx、Node.js（建议 20+）、PM2 管理器  
+2) 拉代码并构建：
+
+```bash
+cd /www/wwwroot/cn111.net
+git clone https://github.com/fastnas2023/CN111.NET.git .
+npm i -g pnpm
+pnpm install
+pnpm build
+```
+
+3) 用 PM2 启动（仅监听本机）：
+
+```bash
+pnpm start -p 3001 -H 127.0.0.1
+```
+
+4) Nginx 反代到 `http://127.0.0.1:3001`，然后在宝塔里配置 HTTPS（Let's Encrypt）
+
 ## 可选：可视化对比 / QA
 
 - 桌面对比（模板 vs clone）：`pnpm compare:visual`
 - QA 自动化：`tests/qa/*`
-
