@@ -19,12 +19,31 @@ export function parseViewModeCookie(
  * 非严格的 UA 移动端判断（用于 auto 模式）。
  * 注意：这是启发式判断，无法 100% 精确。
  */
+function isIpadUserAgent(ua: string): boolean {
+  const u = ua.toLowerCase();
+  // iPad classic UA
+  if (u.includes("ipad")) return true;
+  // iPadOS 13+ sometimes reports as Macintosh but still has "Mobile" token
+  // Example: "Macintosh; Intel Mac OS X ... Mobile/15E148 Safari/604.1"
+  if (u.includes("macintosh") && u.includes("mobile") && u.includes("safari"))
+    return true;
+  return false;
+}
+
 export function isMobileUserAgent(ua: string | undefined | null): boolean {
   if (!ua) return false;
 
-  // 参考常见 UA 片段：Android / iOS / Windows Phone / 一些移动浏览器标识
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(
-    ua,
+  // 产品要求：iPad（含竖屏 768px）走桌面端，因此排除 iPad 的识别。
+  if (isIpadUserAgent(ua)) return false;
+
+  const u = ua.toLowerCase();
+  // 这里仅把“手机端”识别为 mobile，避免小屏桌面环境（如 trae/远程容器）误判为移动端。
+  // Android 平板 UA 通常不包含 "mobile"，而手机 UA 一般包含 "mobile" token。
+  return (
+    u.includes("iphone") ||
+    u.includes("ipod") ||
+    u.includes("windows phone") ||
+    (u.includes("android") && u.includes("mobile"))
   );
 }
 
@@ -41,4 +60,3 @@ export function resolveViewMode(params: {
   if (viewMode === "desktop" || viewMode === "mobile") return viewMode;
   return isMobileUserAgent(params.userAgent) ? "mobile" : "desktop";
 }
-
