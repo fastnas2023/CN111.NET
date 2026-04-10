@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { AiventBodyClass } from "@/app/(site)/AiventBodyClass";
 import { AiventScriptsServer } from "@/app/(site)/AiventScriptsServer";
+import { ViewportViewModeSync } from "@/components/mobile/ViewportViewModeSync";
 
 /**
  * Desktop 专用壳：注入模板需要的 body class + 模板脚本。
@@ -21,9 +22,9 @@ export default function DesktopTemplateShell({
   return (
     <>
       <AiventBodyClass />
+      <ViewportViewModeSync />
       {children}
       <AiventScriptsServer />
     </>
   );
 }
-
