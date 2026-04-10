@@ -1,4 +1,4 @@
-import { AiventScripts } from "./AiventScripts";
+import { AiventScriptsServer } from "./AiventScriptsServer";
 import { AiventBodyClass } from "./AiventBodyClass";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <AiventBodyClass />
       {children}
-      <AiventScripts />
+      <AiventScriptsServer />
     </>
   );
 }

@@ -25,6 +25,21 @@ export function AiventHeadAssets() {
         href="/aivent/css/colors/scheme-01.css"
         precedence="aivent"
       />
+
+      {/* banli logo 为方形，模板原本是横向 logo：这里按 header 高度缩放，避免“又高又大”。 */}
+      <style
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `
+header #logo img.logo-main,
+header #logo img.logo-scroll,
+header #logo img.logo-mobile{
+  height: 44px;
+  width: auto;
+}
+          `.trim(),
+        }}
+      />
     </>
   );
 }

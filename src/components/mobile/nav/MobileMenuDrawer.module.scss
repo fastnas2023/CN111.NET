@@ -1,0 +1,130 @@
+@import "../../../styles/mobile/tokens.scss";
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.backdrop {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  border: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.panel {
+  grid-column: 2;
+  grid-row: 1;
+  width: min(360px, calc(100vw - 56px));
+  height: 100%;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: rgba(17, 22, 43, 0.96);
+  border-left: 1px solid var(--aivent-border);
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  height: $mobile-header-height;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--aivent-text-muted);
+  font-weight: 700;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $mobile-tap-min-height;
+  width: $mobile-tap-min-height;
+  border-radius: 14px;
+  border: 1px solid var(--aivent-border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav {
+  padding: 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+.navLink {
+  min-height: $mobile-tap-min-height;
+  padding: 10px 12px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid transparent;
+  transition: background var(--aivent-dur-1) var(--aivent-ease),
+    border-color var(--aivent-dur-1) var(--aivent-ease);
+}
+
+.navLink:active {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navLinkActive {
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.footer {
+  padding: 12px 14px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.devLabel {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--aivent-text-muted);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.viewModeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.viewModeButton {
+  min-height: $mobile-tap-min-height;
+  padding: 0 10px;
+  border-radius: 14px;
+  border: 1px solid var(--aivent-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.viewModeButtonActive {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.15);
+}
+

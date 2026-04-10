@@ -1,0 +1,13 @@
+@import "../../../styles/mobile/tokens.scss";
+
+.root {
+  min-height: 100vh;
+  background: var(--aivent-bg);
+  color: var(--aivent-text);
+}
+
+.main {
+  padding: 16px;
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+

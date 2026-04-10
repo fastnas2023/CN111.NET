@@ -10,8 +10,10 @@ function isOneOf(pathname: string, list: readonly string[]) {
 /**
  * 以模板原始顺序（vendors -> designesia -> page scripts）加载脚本。
  *
- * 注意：这些脚本依赖 jQuery（在 vendors.js 内），且模板原始写法是在 body 末尾加载。
- * 所以这里使用 `strategy="afterInteractive"`，避免在 SSR/流式渲染阶段抢跑。
+ * 关键点：
+ * - 模板的初始化大多挂在 DOMContentLoaded / window.load 上；
+ * - 如果脚本在页面已完成交互（afterInteractive）之后才注入，可能错过这些事件，导致“没有动效”。
+ * - 因此 vendors / designesia 使用 beforeInteractive 提前加载，确保初始化能正常触发。
  */
 export function AiventScripts() {
   const pathname = usePathname() ?? "/";
@@ -33,12 +35,12 @@ export function AiventScripts() {
       <Script
         id="aivent-vendors"
         src="/aivent/js/vendors.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       <Script
         id="aivent-designesia"
         src="/aivent/js/designesia.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
 
       {needsCountdownAndMarquee ? (
@@ -74,4 +76,3 @@ export function AiventScripts() {
     </>
   );
 }
-

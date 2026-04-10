@@ -1,0 +1,95 @@
+@import "../../../styles/mobile/tokens.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 15, 31, 0.7);
+  border-bottom: 1px solid var(--aivent-border);
+}
+
+.inner {
+  height: $mobile-header-height;
+  padding: 0 16px;
+  padding-top: env(safe-area-inset-top);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: $mobile-tap-min-height;
+  padding: 0 6px;
+  border-radius: 14px;
+}
+
+.brandLogo {
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.brandText {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1;
+  background: linear-gradient(
+    90deg,
+    var(--aivent-primary),
+    var(--aivent-accent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $mobile-tap-min-height;
+  width: $mobile-tap-min-height;
+  border-radius: 14px;
+  border: 1px solid var(--aivent-border);
+  background: rgba(255, 255, 255, 0.04);
+  transition: background var(--aivent-dur-1) var(--aivent-ease);
+}
+
+.menuButton:active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menuIcon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 2px;
+}
+
+.menuIcon::before {
+  top: 0;
+  box-shadow: 0 5px 0 rgba(255, 255, 255, 0.92);
+}
+
+.menuIcon::after {
+  bottom: 0;
+}
+
