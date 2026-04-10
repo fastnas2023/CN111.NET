@@ -5,7 +5,11 @@ import path from "node:path";
 const OUT_DIR = process.env.QA_OUT_DIR ?? "/workspace/qa";
 const BASE_URL = process.env.CLONE_BASE_URL ?? "http://127.0.0.1:3001";
 
-const ROUTES = [
+// i18n: 仅扫描 2 种 locale 以控制测试耗时（详见 docs/superpowers/plans/2026-04-10-multilingual-i18n.md Task 6）
+const LOCALES = ["zh-CN", "en-US"] as const;
+
+// 站点路由（不含 locale 前缀）
+const ROUTE_PATHS = [
   "/",
   "/index-slider",
   "/index-static-background",
@@ -24,12 +28,26 @@ function absUrl(p: string) {
   return new URL(p, BASE_URL).toString();
 }
 
+function withLocale(locale: (typeof LOCALES)[number], href: string) {
+  if (!href.startsWith("/")) return href;
+  if (href === "/") return `/${locale}`;
+  return `/${locale}${href}`;
+}
+
+function routeToFileSlug(route: string) {
+  // "/zh-CN/index-slider" -> "zh-CN__index-slider"
+  const s = route.replace(/^\//, "").replaceAll("/", "__");
+  return s.length ? s : "home";
+}
+
 async function ensureDirs() {
   await fs.mkdir(path.join(OUT_DIR, "screenshots"), { recursive: true });
 }
 
 test.describe("QA smoke audit (console/network/critical UI)", () => {
   test("scan key routes", async ({ browser }) => {
+    // 扫描页面较多（2 locales * N routes * 2 view modes），提升单测超时时间
+    test.setTimeout(3 * 60_000);
     await ensureDirs();
 
     const findings: Array<{
@@ -63,49 +81,52 @@ test.describe("QA smoke audit (console/network/critical UI)", () => {
         },
       ]);
 
-      for (const route of ROUTES) {
-        const page = await ctx.newPage();
-        const url = absUrl(route);
+      for (const locale of LOCALES) {
+        for (const routePath of ROUTE_PATHS) {
+          const route = withLocale(locale, routePath);
+          const page = await ctx.newPage();
+          const url = absUrl(route);
 
-        const consoleErrors: string[] = [];
-        const failedRequests: Array<{ url: string; status?: number; errorText?: string }> = [];
+          const consoleErrors: string[] = [];
+          const failedRequests: Array<{ url: string; status?: number; errorText?: string }> = [];
 
-        page.on("console", (msg) => {
-          if (msg.type() === "error") consoleErrors.push(msg.text());
-        });
+          page.on("console", (msg) => {
+            if (msg.type() === "error") consoleErrors.push(msg.text());
+          });
 
-        page.on("response", async (resp) => {
-          const status = resp.status();
-          if (status >= 400) failedRequests.push({ url: resp.url(), status });
-        });
-        page.on("requestfailed", (req) => {
-          failedRequests.push({ url: req.url(), errorText: req.failure()?.errorText });
-        });
+          page.on("response", async (resp) => {
+            const status = resp.status();
+            if (status >= 400) failedRequests.push({ url: resp.url(), status });
+          });
+          page.on("requestfailed", (req) => {
+            failedRequests.push({ url: req.url(), errorText: req.failure()?.errorText });
+          });
 
-        await page.goto(url, { waitUntil: "domcontentloaded" });
-        await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => undefined);
-        await page.waitForTimeout(500);
+          await page.goto(url, { waitUntil: "domcontentloaded" });
+          await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => undefined);
+          await page.waitForTimeout(500);
 
-        // 关键验收：桌面 index-slider 需要左右箭头存在且可见
-        if (mode === "desktop" && route === "/index-slider") {
-          await expect(page.locator(".swiper-button-prev")).toBeVisible();
-          await expect(page.locator(".swiper-button-next")).toBeVisible();
+          // 关键验收：桌面 index-slider 需要左右箭头存在且可见
+          if (mode === "desktop" && route.endsWith("/index-slider")) {
+            await expect(page.locator(".swiper-button-prev")).toBeVisible();
+            await expect(page.locator(".swiper-button-next")).toBeVisible();
+          }
+
+          const file = `qa-${mode}-${routeToFileSlug(route)}.png`;
+          const screenshotRel = `screenshots/${file}`;
+          await page.screenshot({ path: path.join(OUT_DIR, screenshotRel), fullPage: false });
+
+          findings.push({
+            mode,
+            route,
+            url,
+            consoleErrors,
+            failedRequests,
+            screenshot: screenshotRel,
+          });
+
+          await page.close();
         }
-
-        const file = `qa-${mode}-${route === "/" ? "home" : route.slice(1)}.png`;
-        const screenshotRel = `screenshots/${file}`;
-        await page.screenshot({ path: path.join(OUT_DIR, screenshotRel), fullPage: false });
-
-        findings.push({
-          mode,
-          route,
-          url,
-          consoleErrors,
-          failedRequests,
-          screenshot: screenshotRel,
-        });
-
-        await page.close();
       }
 
       await ctx.close();
@@ -163,4 +184,3 @@ test.describe("QA smoke audit (console/network/critical UI)", () => {
     await fs.writeFile(path.join(OUT_DIR, "report.md"), lines.join("\n"), "utf8");
   });
 });
-
