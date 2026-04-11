@@ -25,18 +25,40 @@
     });
 
     safe(function () {
-      // Marquee：如果插件存在，重新触发一次
-      if (window.jQuery && window.jQuery.fn && window.jQuery.fn.marquee) {
-        window.jQuery(".de-marquee-list-1,.de-marquee-list-2").trigger("stop").marquee({
-          direction: "left",
-          duration: 60000,
-          gap: 0,
-          delayBeforeStart: 0,
-          duplicated: true,
-          startVisible: true,
-        });
+      // Marquee：避免重复初始化（重复 .marquee() 会造成嵌套 wrapper，表现为不滚动/卡住）
+      if (!(window.jQuery && window.jQuery.fn && window.jQuery.fn.marquee)) return;
+
+      function ensureMarquee(selector, opts) {
+        var $el = window.jQuery(selector);
+        if (!$el.length) return;
+
+        // 已初始化：尽量恢复（如果插件支持）
+        if ($el.find(".js-marquee-wrapper").length) {
+          try {
+            $el.marquee("resume");
+          } catch (e) {}
+          return;
+        }
+
+        $el.marquee(opts);
       }
+
+      ensureMarquee(".de-marquee-list-1", {
+        direction: "right",
+        duration: 60000,
+        gap: 0,
+        delayBeforeStart: 0,
+        duplicated: true,
+        startVisible: true,
+      });
+      ensureMarquee(".de-marquee-list-2", {
+        direction: "left",
+        duration: 60000,
+        gap: 0,
+        delayBeforeStart: 0,
+        duplicated: true,
+        startVisible: true,
+      });
     });
   });
 })();
-
