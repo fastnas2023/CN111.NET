@@ -31,5 +31,11 @@
     "pngjs": "^7.0.0",
     "sass": "^1.99.0",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }
