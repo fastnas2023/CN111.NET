@@ -1,0 +1,71 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--aivent-bg, #0f1322);
+}
+
+.main {
+  flex: 1;
+  padding-top: 120px; // account for fixed header
+  padding-bottom: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.infoCard {
+  h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  
+  .item {
+    margin-bottom: 24px;
+    h4 {
+      color: var(--primary-color, #ff4200);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+  }
+}
