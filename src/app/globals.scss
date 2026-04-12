@@ -32,22 +32,7 @@ a {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.cn111-lang-switcher--desktop {
-  position: fixed;
-  z-index: 9999;
-  // 避免遮挡模板顶部导航
-  top: 84px;
-  right: 12px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: rgba(17, 22, 43, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
 
-  // 允许点击穿透到导航，只在实际控件上拦截指针事件
-  pointer-events: none;
-}
-
-.cn111-lang-switcher--desktop * {
-  pointer-events: auto;
+.cn111-lang-active {
+  color: var(--primary-color) !important;
 }

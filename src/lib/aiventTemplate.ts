@@ -133,7 +133,7 @@ function injectDesktopLanguageMenu(opts: {
   const items = (Object.keys(LOCALE_LABEL_KEY) as SupportedLocale[])
     .map((loc) => {
       const href = `/${loc}${rest}`;
-      const active = loc === opts.locale ? " active" : "";
+      const active = loc === opts.locale ? " cn111-lang-active" : "";
       return `<li><a class="menu-item${active}" href="${href}">${opts.t(LOCALE_LABEL_KEY[loc])}</a></li>`;
     })
     .join("");
