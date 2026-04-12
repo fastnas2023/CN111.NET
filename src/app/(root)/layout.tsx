@@ -5,9 +5,11 @@ export default function RootRedirectLayout({
 }) {
   // 仅用于 `/` 的重定向；不引入全局样式，避免重复注入。
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
       {/* 与主站保持一致：避免从 / 重定向进入时闪白 */}
-      <body className="dark-scheme">{children}</body>
+      <body className="dark-scheme" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

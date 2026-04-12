@@ -22,7 +22,7 @@ export default async function Page(props: {
     <ResponsiveRoute
       desktop={
         <DesktopTemplateShell>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: html }} />
         </DesktopTemplateShell>
       }
       mobile={<MobileIndexStaticBackgroundPage />}

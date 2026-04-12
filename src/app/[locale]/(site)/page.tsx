@@ -22,7 +22,8 @@ export default async function Page(props: {
     <ResponsiveRoute
       desktop={
         <DesktopTemplateShell>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          {/* 模板脚本会在 hydration 前改动 DOM（jarallax/skrollr），避免 dev hydration mismatch 提示 */}
+          <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: html }} />
         </DesktopTemplateShell>
       }
       mobile={<MobileHomePage />}

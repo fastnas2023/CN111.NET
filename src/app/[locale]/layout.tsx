@@ -57,12 +57,14 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   return (
-    <html lang={locale} dir={getHtmlDir(locale)}>
+    // 模板脚本（designesia/skrollr/jarallax 等）会在 hydration 前修改 <html>/<body> 属性，
+    // 导致 dev 环境出现 hydration mismatch 提示。这里对根节点显式 suppress。
+    <html lang={locale} dir={getHtmlDir(locale)} suppressHydrationWarning>
       <head>
         <AiventHeadAssets />
       </head>
       {/* SSR 直接带上 dark-scheme，避免首屏“闪白”（跑马灯露白） */}
-      <body className="dark-scheme">
+      <body className="dark-scheme" suppressHydrationWarning>
         <I18nProvider locale={locale} messages={messages}>
           <AppProviders>{children}</AppProviders>
         </I18nProvider>
