@@ -61,7 +61,8 @@ export default async function LocaleLayout({
       <head>
         <AiventHeadAssets />
       </head>
-      <body>
+      {/* SSR 直接带上 dark-scheme，避免首屏“闪白”（跑马灯露白） */}
+      <body className="dark-scheme">
         <I18nProvider locale={locale} messages={messages}>
           <AppProviders>{children}</AppProviders>
         </I18nProvider>
