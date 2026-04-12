@@ -1,0 +1,1055 @@
+{
+  "meta": {
+    "started_at": "2026-04-09T20:04:58Z",
+    "base_url": "https://srbthemes.kcubeinfotech.com/aivent/html/",
+    "dest_root": "/workspace/cn111-website/public/aivent/",
+    "max_total_bytes": 209715200,
+    "page_count": 10
+  },
+  "pages": [
+    "https://srbthemes.kcubeinfotech.com/aivent/html/index.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/contact.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/index-countdown.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/index-slider-text.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/index-slider.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/index-static-background.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/news-single.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/news.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/tickets-2.html",
+    "https://srbthemes.kcubeinfotech.com/aivent/html/tickets.html"
+  ],
+  "records": [
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/index.html",
+      "local_path": "index.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 86052,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/contact.html",
+      "local_path": "contact.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 17359,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/index-countdown.html",
+      "local_path": "index-countdown.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 85280,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/index-slider-text.html",
+      "local_path": "index-slider-text.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 87857,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/index-slider.html",
+      "local_path": "index-slider.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 87945,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/index-static-background.html",
+      "local_path": "index-static-background.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 86715,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/news-single.html",
+      "local_path": "news-single.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 23030,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/news.html",
+      "local_path": "news.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 19858,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/tickets-2.html",
+      "local_path": "tickets-2.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 30463,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/tickets.html",
+      "local_path": "tickets.html",
+      "kind": "page",
+      "status": "ok",
+      "bytes": 30075,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo.webp",
+      "local_path": "images/logo.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 4422,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/demo/homepage-4.webp",
+      "local_path": "images/demo/homepage-4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 66750,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/icon.webp",
+      "local_path": "images/icon.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1854,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/vendors.css",
+      "local_path": "css/vendors.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 93327,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/4.webp",
+      "local_path": "images/background/4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 498976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/colors/scheme-01.css",
+      "local_path": "css/colors/scheme-01.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 142,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/demo/homepage-5.webp",
+      "local_path": "images/demo/homepage-5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 58322,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/demo/homepage-1.webp",
+      "local_path": "images/demo/homepage-1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 49046,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/vendors.js",
+      "local_path": "js/vendors.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 704470,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/designesia.js",
+      "local_path": "js/designesia.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 55532,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/validation-contact.js",
+      "local_path": "js/validation-contact.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 2808,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/bootstrap.min.css",
+      "local_path": "css/bootstrap.min.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 155845,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/style.css",
+      "local_path": "css/style.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 233850,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/demo/homepage-2.webp",
+      "local_path": "images/demo/homepage-2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 97292,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/demo/homepage-3.webp",
+      "local_path": "images/demo/homepage-3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 60588,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/10.webp",
+      "local_path": "images/logo-light/10.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/16.webp",
+      "local_path": "images/team/16.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 62374,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/2.webp",
+      "local_path": "images/background/2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 535762,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/barcode.webp",
+      "local_path": "images/misc/barcode.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 35074,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/4.webp",
+      "local_path": "images/logo-light/4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s4.webp",
+      "local_path": "images/misc/s4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 237706,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/10.webp",
+      "local_path": "images/team/10.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 69240,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/5.webp",
+      "local_path": "images/logo-light/5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/4.webp",
+      "local_path": "images/team/4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 59702,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/l2.webp",
+      "local_path": "images/misc/l2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 532112,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/l1.webp",
+      "local_path": "images/misc/l1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 524418,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s9.webp",
+      "local_path": "images/misc/s9.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 146850,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/7.webp",
+      "local_path": "images/logo-light/7.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/14.webp",
+      "local_path": "images/team/14.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 66870,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/1.webp",
+      "local_path": "images/team/1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 63598,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/countdown-custom.js",
+      "local_path": "js/countdown-custom.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 190,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/2.webp",
+      "local_path": "images/logo-light/2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/20.webp",
+      "local_path": "images/team/20.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 61852,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/7.webp",
+      "local_path": "images/background/7.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 353662,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/5.webp",
+      "local_path": "images/team/5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 59098,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/3.webp",
+      "local_path": "images/logo-light/3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s7.webp",
+      "local_path": "images/misc/s7.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 348884,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/3.webp",
+      "local_path": "images/team/3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 59022,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/9.webp",
+      "local_path": "images/logo-light/9.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/17.webp",
+      "local_path": "images/team/17.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 52380,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/19.webp",
+      "local_path": "images/team/19.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 72204,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/15.webp",
+      "local_path": "images/team/15.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 58560,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/7.webp",
+      "local_path": "images/team/7.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 62594,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/11.webp",
+      "local_path": "images/team/11.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 36044,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/8.webp",
+      "local_path": "images/logo-light/8.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-big-white.webp",
+      "local_path": "images/logo-big-white.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 6422,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/2.webp",
+      "local_path": "images/team/2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 66504,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/9.webp",
+      "local_path": "images/team/9.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 58246,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/3.webp",
+      "local_path": "images/background/3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 424542,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/custom-marquee.js",
+      "local_path": "js/custom-marquee.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 412,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/12.webp",
+      "local_path": "images/team/12.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 57210,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/1.webp",
+      "local_path": "images/background/1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 527644,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/8.webp",
+      "local_path": "images/team/8.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 48688,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/1.webp",
+      "local_path": "images/logo-light/1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/18.webp",
+      "local_path": "images/team/18.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 67534,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s8.webp",
+      "local_path": "images/misc/s8.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 460216,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/logo-light/6.webp",
+      "local_path": "images/logo-light/6.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1976,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s6.webp",
+      "local_path": "images/misc/s6.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 218678,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/13.webp",
+      "local_path": "images/team/13.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 72182,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s3.webp",
+      "local_path": "images/misc/s3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 244324,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/c1.webp",
+      "local_path": "images/misc/c1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 356356,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/team/6.webp",
+      "local_path": "images/team/6.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 62506,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s5.webp",
+      "local_path": "images/misc/s5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 484672,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/swiper-custom-1.css",
+      "local_path": "css/swiper-custom-1.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 634,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/swiper.js",
+      "local_path": "js/swiper.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 151436,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/css/swiper.css",
+      "local_path": "css/swiper.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 18451,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/js/custom-swiper-1.js",
+      "local_path": "js/custom-swiper-1.js",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 598,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s2.webp",
+      "local_path": "images/misc/s2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 539364,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s1.webp",
+      "local_path": "images/misc/s1.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/s1.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/background/5.webp",
+      "local_path": "images/background/5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 632522,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/4.webp",
+      "local_path": "images/testimonial/4.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/4.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/sd1.webp",
+      "local_path": "images/misc/sd1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 646108,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/3.webp",
+      "local_path": "images/testimonial/3.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/3.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/1.webp",
+      "local_path": "images/testimonial/1.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/1.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/5.webp",
+      "local_path": "images/testimonial/5.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/5.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/2.webp",
+      "local_path": "images/testimonial/2.webp",
+      "kind": "asset",
+      "status": "failed",
+      "bytes": 0,
+      "error": "404 Client Error: Not Found for url: https://srbthemes.kcubeinfotech.com/aivent/html/images/testimonial/2.webp"
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s4.webp",
+      "local_path": "images/news/s4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 237706,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s6.webp",
+      "local_path": "images/news/s6.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 348884,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s1.webp",
+      "local_path": "images/news/s1.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 218678,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s3.webp",
+      "local_path": "images/news/s3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 244324,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s2.webp",
+      "local_path": "images/news/s2.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 539364,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/news/s5.webp",
+      "local_path": "images/news/s5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 484672,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/icofont/icofont.min.css",
+      "local_path": "fonts/icofont/icofont.min.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 92208,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/l5.webp",
+      "local_path": "images/misc/l5.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 36396,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/et-line-font/style.css",
+      "local_path": "fonts/et-line-font/style.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 7052,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/elegant_font/HTML_CSS/style.css",
+      "local_path": "fonts/elegant_font/HTML_CSS/style.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 25237,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-down-light.png",
+      "local_path": "images/ui/arrow-down-light.png",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1677,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-down.png",
+      "local_path": "images/ui/arrow-down.png",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 2964,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/css/brands.css",
+      "local_path": "fonts/fontawesome6/css/brands.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 24006,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/css/fontawesome.css",
+      "local_path": "fonts/fontawesome6/css/fontawesome.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 113421,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-up.png",
+      "local_path": "images/ui/arrow-up.png",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 2964,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/css/font-awesome.css",
+      "local_path": "fonts/fontawesome4/css/font-awesome.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 35128,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/l4.webp",
+      "local_path": "images/misc/l4.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 42588,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/misc/l3.webp",
+      "local_path": "images/misc/l3.webp",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 39404,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-right-white.svg",
+      "local_path": "images/ui/arrow-right-white.svg",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 350,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-up-light.png",
+      "local_path": "images/ui/arrow-up-light.png",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 1676,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/images/ui/arrow-top-right-white.svg",
+      "local_path": "images/ui/arrow-top-right-white.svg",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 553,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/css/solid.css",
+      "local_path": "fonts/fontawesome6/css/solid.css",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 625,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/icofont/fonts/icofont.woff",
+      "local_path": "fonts/icofont/fonts/icofont.woff",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 645604,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/icofont/fonts/icofont.woff2",
+      "local_path": "fonts/icofont/fonts/icofont.woff2",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 537868,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/et-line-font/fonts/et-line.woff",
+      "local_path": "fonts/et-line-font/fonts/et-line.woff",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 55220,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/et-line-font/fonts/et-line.eot",
+      "local_path": "fonts/et-line-font/fonts/et-line.eot",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 32694,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/et-line-font/fonts/et-line.ttf",
+      "local_path": "fonts/et-line-font/fonts/et-line.ttf",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 32536,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/et-line-font/fonts/et-line.svg",
+      "local_path": "fonts/et-line-font/fonts/et-line.svg",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 175433,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.svg",
+      "local_path": "fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.svg",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 276933,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.eot",
+      "local_path": "fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.eot",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 59572,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.woff",
+      "local_path": "fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.woff",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 63664,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.ttf",
+      "local_path": "fonts/elegant_font/HTML_CSS/fonts/ElegantIcons.ttf",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 59388,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/webfonts/fa-brands-400.woff2",
+      "local_path": "fonts/fontawesome6/webfonts/fa-brands-400.woff2",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 109808,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/webfonts/fa-brands-400.ttf",
+      "local_path": "fonts/fontawesome6/webfonts/fa-brands-400.ttf",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 189684,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.ttf?v=4.6.3",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont__q9f1d09fc6c.ttf",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 152796,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.woff2?v=4.6.3",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont__q9f1d09fc6c.woff2",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 71896,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.woff?v=4.6.3",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont__q9f1d09fc6c.woff",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 90412,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.eot",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont.eot",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 76518,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.svg?v=4.6.3",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont__q9f1d09fc6c.svg",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 391622,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome4/fonts/fontawesome-webfont.eot?v=4.6.3",
+      "local_path": "fonts/fontawesome4/fonts/fontawesome-webfont__q9f1d09fc6c.eot",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 76518,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/webfonts/fa-solid-900.ttf",
+      "local_path": "fonts/fontawesome6/webfonts/fa-solid-900.ttf",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 394668,
+      "error": null
+    },
+    {
+      "url": "https://srbthemes.kcubeinfotech.com/aivent/html/fonts/fontawesome6/webfonts/fa-solid-900.woff2",
+      "local_path": "fonts/fontawesome6/webfonts/fa-solid-900.woff2",
+      "kind": "asset",
+      "status": "ok",
+      "bytes": 150020,
+      "error": null
+    }
+  ],
+  "summary": {
+    "finished_at": "2026-04-09T20:05:14Z",
+    "downloaded_files_ok": 122,
+    "failed": 6,
+    "skipped": 0,
+    "total_downloaded_bytes": 17443794,
+    "total_downloaded_mb": 16.64
+  }
+}

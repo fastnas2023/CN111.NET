@@ -13,7 +13,7 @@ export function DesktopFooter() {
     <footer className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.brand}>
-          <img src="/assets/images/logo.webp" alt="Logo" />
+          <img src="/aivent/images/logo.webp" alt="Logo" />
           <p>The premier event for tech innovators.</p>
         </div>
         <div className={styles.links}>

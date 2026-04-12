@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,55578,r=>{"use strict";var t=r.i(18171),e=r.i(72453);r.s(["AppProviders",0,function({children:r}){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.IconSprite,{}),r]})}])}]);

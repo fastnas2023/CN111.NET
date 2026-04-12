@@ -1,0 +1,90 @@
+- generic [active] [ref=e1]:
+  - generic "语言" [ref=e2]:
+    - button "语言" [ref=e3] [cursor=pointer]: 语言中文
+    - menu [ref=e4]:
+      - generic [ref=e5]: 语言
+      - generic [ref=e6]:
+        - menuitem [ref=e7] [cursor=pointer]: 中文
+        - menuitem [ref=e8] [cursor=pointer]: English
+        - menuitem [ref=e9] [cursor=pointer]: Deutsch
+        - menuitem [ref=e10] [cursor=pointer]: Français
+        - menuitem [ref=e11] [cursor=pointer]: 日本語
+        - menuitem [ref=e12] [cursor=pointer]: 한국어
+        - menuitem [ref=e13] [cursor=pointer]: Русский
+        - menuitem [ref=e14] [cursor=pointer]: العربية
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - link "Scroll to top" [ref=e19] [cursor=pointer]:
+        - /url: "#"
+      - banner [ref=e21]:
+        - generic [ref=e25]:
+          - generic:
+            - generic:
+              - link:
+                - /url: /zh-CN
+          - generic [ref=e27]:
+            - list:
+              - listitem [ref=e28]:
+                - link "首页" [ref=e29] [cursor=pointer]:
+                  - /url: "#section-hero"
+              - listitem [ref=e30]:
+                - link "About" [ref=e31] [cursor=pointer]:
+                  - /url: "#section-about"
+              - listitem [ref=e32]:
+                - link "Why Attend" [ref=e33] [cursor=pointer]:
+                  - /url: "#section-why-attend"
+              - listitem [ref=e34]:
+                - link "Speakers" [ref=e35] [cursor=pointer]:
+                  - /url: "#section-speakers"
+              - listitem [ref=e36]:
+                - link "Schedule" [ref=e37] [cursor=pointer]:
+                  - /url: "#section-schedule"
+              - listitem [ref=e38]:
+                - link "票务" [ref=e39] [cursor=pointer]:
+                  - /url: "#section-tickets"
+              - listitem [ref=e40]:
+                - link "Venue" [ref=e41] [cursor=pointer]:
+                  - /url: "#section-venue"
+              - listitem [ref=e42]:
+                - link "FAQ" [ref=e43] [cursor=pointer]:
+                  - /url: "#section-faq"
+              - listitem [ref=e44]:
+                - link "Pages" [ref=e45] [cursor=pointer]:
+                  - /url: /zh-CN/news
+          - generic [ref=e46]:
+            - link "Buy 票务" [ref=e47] [cursor=pointer]:
+              - /url: /zh-CN/tickets-2
+              - generic [ref=e48]: Buy 票务
+            - generic: 
+      - list [ref=e61]
+      - region "section" [ref=e63]
+      - region "section" [ref=e84]:
+        - generic [ref=e92]: Elon Musk
+      - region "section" [ref=e102]
+      - region "section" [ref=e112]
+      - region "section" [ref=e120]
+      - region "section" [ref=e135]
+    - contentinfo [ref=e143]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - heading "Address" [level=3] [ref=e149]
+          - text: 121 AI Blvd, San Francisco
+          - text: BCA 94107
+        - generic [ref=e151]:
+          - link "" [ref=e152] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e153]: 
+          - link "" [ref=e154] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e155]: 
+          - link "" [ref=e156] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e157]: 
+          - link "" [ref=e158] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e159]: 
+        - generic [ref=e160]:
+          - heading "联系我们 Us" [level=3] [ref=e161]
+          - text: T. +1 123 456 789
+          - text: M. contact@aivent.com
+      - generic [ref=e165]: Copyright 2025 - AIvent by SRBThemes

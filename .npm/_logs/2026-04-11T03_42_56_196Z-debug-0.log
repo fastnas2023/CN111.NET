@@ -1,0 +1,83 @@
+0 verbose cli /opt/homebrew/Cellar/node/23.11.0/bin/node /opt/homebrew/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v23.11.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/zhangjianhua/CN111.local/.npmrc
+5 silly config load:file:/opt/homebrew/etc/npmrc
+6 verbose title npm exec playwright-cli open https://www.cn111.net --headed
+7 verbose argv "exec" "--yes" "--package" "@playwright/cli" "--" "playwright-cli" "open" "https://www.cn111.net" "--headed"
+8 verbose logfile logs-max:10 dir:/Users/zhangjianhua/CN111.local/.npm/_logs/2026-04-11T03_42_56_196Z-
+9 verbose logfile /Users/zhangjianhua/CN111.local/.npm/_logs/2026-04-11T03_42_56_196Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 http fetch GET 200 https://registry.npmjs.org/npm 1096ms
+13 http fetch GET 200 https://registry.npmjs.org/@playwright%2fcli 177ms (cache miss)
+14 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+15 silly idealTree buildDeps
+16 silly fetch manifest @playwright/cli@0.1.6
+17 silly packumentCache full:https://registry.npmjs.org/@playwright%2fcli cache-miss
+18 http fetch GET 200 https://registry.npmjs.org/@playwright%2fcli 147ms (cache miss)
+19 silly packumentCache full:https://registry.npmjs.org/@playwright%2fcli set size:undefined disposed:false
+20 silly placeDep ROOT @playwright/cli@0.1.6 OK for:  want: 0.1.6
+21 silly fetch manifest minimist@^1.2.5
+22 silly packumentCache full:https://registry.npmjs.org/minimist cache-miss
+23 silly fetch manifest playwright@1.60.0-alpha-1775584683000
+24 silly packumentCache full:https://registry.npmjs.org/playwright cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/minimist 143ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/minimist set size:undefined disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/playwright 1696ms (cache miss)
+28 silly packumentCache full:https://registry.npmjs.org/playwright set size:undefined disposed:false
+29 silly placeDep ROOT minimist@1.2.8 OK for: @playwright/cli@0.1.6 want: ^1.2.5
+30 silly placeDep ROOT playwright@1.60.0-alpha-1775584683000 OK for: @playwright/cli@0.1.6 want: 1.60.0-alpha-1775584683000
+31 silly fetch manifest playwright-core@1.60.0-alpha-1775584683000
+32 silly packumentCache full:https://registry.npmjs.org/playwright-core cache-miss
+33 silly fetch manifest fsevents@2.3.2
+34 silly packumentCache full:https://registry.npmjs.org/fsevents cache-miss
+35 http fetch GET 200 https://registry.npmjs.org/fsevents 152ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/fsevents set size:undefined disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/playwright-core 957ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/playwright-core set size:undefined disposed:false
+39 silly placeDep ROOT fsevents@2.3.2 OK for: playwright@1.60.0-alpha-1775584683000 want: 2.3.2
+40 silly placeDep ROOT playwright-core@1.60.0-alpha-1775584683000 OK for: playwright@1.60.0-alpha-1775584683000 want: 1.60.0-alpha-1775584683000
+41 silly reify moves {}
+42 silly audit bulk request {
+42 silly audit   '@playwright/cli': [ '0.1.6' ],
+42 silly audit   minimist: [ '1.2.8' ],
+42 silly audit   playwright: [ '1.60.0-alpha-1775584683000' ],
+42 silly audit   fsevents: [ '2.3.2' ],
+42 silly audit   'playwright-core': [ '1.60.0-alpha-1775584683000' ]
+42 silly audit }
+43 http cache fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz 0ms (cache hit)
+44 http cache playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.60.0-alpha-1775584683000.tgz 0ms (cache hit)
+45 http cache playwright@https://registry.npmjs.org/playwright/-/playwright-1.60.0-alpha-1775584683000.tgz 0ms (cache hit)
+46 http cache minimist@https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz 0ms (cache hit)
+47 http cache @playwright/cli@https://registry.npmjs.org/@playwright/cli/-/cli-0.1.6.tgz 0ms (cache hit)
+48 silly tarball no local data for fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz. Extracting by manifest.
+49 silly tarball no local data for playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.60.0-alpha-1775584683000.tgz. Extracting by manifest.
+50 silly tarball no local data for playwright@https://registry.npmjs.org/playwright/-/playwright-1.60.0-alpha-1775584683000.tgz. Extracting by manifest.
+51 silly tarball no local data for minimist@https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz. Extracting by manifest.
+52 silly tarball no local data for @playwright/cli@https://registry.npmjs.org/@playwright/cli/-/cli-0.1.6.tgz. Extracting by manifest.
+53 http fetch GET 200 https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz 144ms (cache miss)
+54 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 266ms
+55 silly audit report {}
+56 http fetch GET 200 https://registry.npmjs.org/@playwright/cli/-/cli-0.1.6.tgz 595ms (cache miss)
+57 http fetch GET 200 https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz 1020ms (cache miss)
+58 http fetch GET 200 https://registry.npmjs.org/playwright/-/playwright-1.60.0-alpha-1775584683000.tgz 1364ms (cache miss)
+59 http fetch GET 200 https://registry.npmjs.org/playwright-core/-/playwright-core-1.60.0-alpha-1775584683000.tgz 1638ms (cache miss)
+60 info run fsevents@2.3.2 install node_modules/fsevents node-gyp rebuild
+61 info run fsevents@2.3.2 install { code: 1, signal: null }
+62 verbose reify failed optional dependency /Users/zhangjianhua/CN111.local/.npm/_npx/31e32ef8478fbf80/node_modules/fsevents
+63 silly reify mark deleted [
+63 silly reify   '/Users/zhangjianhua/CN111.local/.npm/_npx/31e32ef8478fbf80/node_modules/fsevents'
+63 silly reify ]
+64 verbose cwd /Users/zhangjianhua/CN111.local
+65 verbose os Darwin 25.3.0
+66 verbose node v23.11.0
+67 verbose npm  v10.9.2
+68 notice
+68 notice New major version of npm available! 10.9.2 -> 11.12.1
+68 notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+68 notice To update run: npm install -g npm@11.12.1
+68 notice  { force: true, [Symbol(proc-log.meta)]: true }
+69 verbose exit 0
+70 info ok
