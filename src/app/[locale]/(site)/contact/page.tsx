@@ -1,30 +1,11 @@
-import { getAiventTemplateBodyHtml } from "@/lib/aiventTemplate";
-import { createT, getMessages } from "@/i18n/server";
-import type { SupportedLocale } from "@/i18n/locales";
-import ResponsiveRoute from "../_routing/ResponsiveRoute";
-import DesktopTemplateShell from "../_routing/DesktopTemplateShell";
+import { DesktopContactPage } from "@/components/site/contact/DesktopContactPage";
 import { MobileContactPage } from "../(mobile)/contact/MobilePage";
+import ResponsiveRoute from "../_routing/ResponsiveRoute";
 
-export default async function Page(props: {
-  params: Promise<{ locale: SupportedLocale }>;
-}) {
-  const { locale } = await props.params;
-  const messages = await getMessages(locale);
-  const t = createT(messages);
-
-  const html = await getAiventTemplateBodyHtml({
-    templateFileName: "contact.html",
-    locale,
-    pageKey: "contact",
-    t,
-  });
+export default async function Page() {
   return (
     <ResponsiveRoute
-      desktop={
-        <DesktopTemplateShell>
-          <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: html }} />
-        </DesktopTemplateShell>
-      }
+      desktop={<DesktopContactPage />}
       mobile={<MobileContactPage />}
     />
   );
