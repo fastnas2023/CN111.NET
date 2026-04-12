@@ -6,6 +6,30 @@ import { applyDesktopI18n, type DesktopPageKey } from "@/i18n/aiventDesktop";
 
 type RewriteRule = { from: string; to: string };
 
+const DESKTOP_REST_BY_PAGE: Record<DesktopPageKey, string> = {
+  home: "",
+  "index-slider": "/index-slider",
+  "index-static-background": "/index-static-background",
+  "index-slider-text": "/index-slider-text",
+  "index-countdown": "/index-countdown",
+  tickets: "/tickets",
+  "tickets-2": "/tickets-2",
+  news: "/news",
+  "news-single": "/news-single",
+  contact: "/contact",
+};
+
+const LOCALE_LABEL_KEY: Record<SupportedLocale, string> = {
+  "zh-CN": "lang.zhCN",
+  "en-US": "lang.enUS",
+  "de-DE": "lang.deDE",
+  "fr-FR": "lang.frFR",
+  "ja-JP": "lang.jaJP",
+  "ko-KR": "lang.koKR",
+  "ru-RU": "lang.ruRU",
+  "ar-SA": "lang.arSA",
+};
+
 const LINK_REWRITES: RewriteRule[] = [
   { from: 'href="index.html"', to: "" },
   { from: 'href="index-slider.html"', to: "/index-slider" },
@@ -65,6 +89,67 @@ function rewriteContactFormAction(html: string) {
     .replaceAll('action=""', 'action="/api/contact"');
 }
 
+function findMainmenuInsertIndex(html: string): number | null {
+  const start = html.indexOf('<ul id="mainmenu">');
+  if (start === -1) return null;
+
+  let i = start;
+  let depth = 0;
+  while (i < html.length) {
+    const nextOpen = html.indexOf("<ul", i);
+    const nextClose = html.indexOf("</ul>", i);
+    if (nextClose === -1) return null;
+
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      i = nextOpen + 3;
+      continue;
+    }
+
+    depth -= 1;
+    if (depth === 0) {
+      return nextClose;
+    }
+    i = nextClose + 5;
+  }
+  return null;
+}
+
+function injectDesktopLanguageMenu(opts: {
+  html: string;
+  locale: SupportedLocale;
+  pageKey: DesktopPageKey;
+  t: (k: string) => string;
+}) {
+  // Avoid double injection.
+  if (opts.html.includes('data-cn111="lang-menu"')) return opts.html;
+
+  const insertAt = findMainmenuInsertIndex(opts.html);
+  if (insertAt == null) return opts.html;
+
+  const rest = DESKTOP_REST_BY_PAGE[opts.pageKey] ?? "";
+  const label = opts.t(LOCALE_LABEL_KEY[opts.locale]);
+
+  const items = (Object.keys(LOCALE_LABEL_KEY) as SupportedLocale[])
+    .map((loc) => {
+      const href = `/${loc}${rest}`;
+      const active = loc === opts.locale ? " active" : "";
+      return `<li><a class="menu-item${active}" href="${href}">${opts.t(LOCALE_LABEL_KEY[loc])}</a></li>`;
+    })
+    .join("");
+
+  const menuHtml = `
+<li data-cn111="lang-menu">
+  <a class="menu-item" href="/${opts.locale}${rest}">${label}</a>
+  <ul>
+    ${items}
+  </ul>
+</li>
+`.trim();
+
+  return opts.html.slice(0, insertAt) + menuHtml + opts.html.slice(insertAt);
+}
+
 /**
  * Read legacy template HTML from /public/aivent and extract body content (without <script> tags):
  * - Keep wrapper + footer (footer sits outside wrapper in this template)
@@ -112,6 +197,14 @@ export async function getAiventTemplateBodyHtml(opts: {
     page: opts.pageKey,
     t: opts.t,
     locale: opts.locale,
+  });
+
+  // 桌面端（模板）语言入口：放入顶栏导航，样式与 Pages 同款下拉
+  html = injectDesktopLanguageMenu({
+    html,
+    locale: opts.locale,
+    pageKey: opts.pageKey,
+    t: opts.t,
   });
   return html;
 }
