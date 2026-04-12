@@ -25,9 +25,11 @@ export function DesktopHeader() {
 
       <div className={styles.actions}>
         <LanguageSwitcher variant="desktop" />
-        <Button variant="primary" size="sm" asChild>
-          <Link href={`/${locale}/tickets-2`}>Buy Tickets</Link>
-        </Button>
+        <Link href={`/${locale}/tickets-2`} passHref legacyBehavior>
+          <Button variant="primary" size="sm">
+            Buy Tickets
+          </Button>
+        </Link>
       </div>
     </header>
   );
