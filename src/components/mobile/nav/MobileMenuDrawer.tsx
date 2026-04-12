@@ -103,6 +103,11 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
           </button>
         </div>
 
+        <div className={styles.topArea}>
+          <div className={styles.devLabel}>{t("lang.label")}</div>
+          <LanguageSwitcher variant="mobile" onNavigate={onClose} />
+        </div>
+
         <nav className={styles.nav} aria-label={t("mobile.menu.navAriaLabel")}>
           {NAV_ITEMS.map((item) => {
             const href = withLocale(locale, item.href);
@@ -128,33 +133,26 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
           })}
         </nav>
 
-        <div className={styles.footer}>
-          <div className={styles.devLabel}>{t("lang.label")}</div>
-          <LanguageSwitcher variant="mobile" />
-
-          {isDev ? (
-            <>
-              <div className={styles.devLabel} style={{ marginTop: 14 }}>
-                {t("mobile.viewMode.title")}
-              </div>
-              <div className={styles.viewModeGrid}>
-                {(["auto", "mobile", "desktop"] as const).map((mode) => (
-                  <button
-                    key={mode}
-                    type="button"
-                    className={[
-                      styles.viewModeButton,
-                      currentViewMode === mode ? styles.viewModeButtonActive : "",
-                    ].join(" ")}
-                    onClick={() => setViewMode(mode)}
-                  >
-                    {t(`mobile.viewMode.${mode}`)}
-                  </button>
-                ))}
-              </div>
-            </>
-          ) : null}
-        </div>
+        {isDev ? (
+          <div className={styles.footer}>
+            <div className={styles.devLabel}>{t("mobile.viewMode.title")}</div>
+            <div className={styles.viewModeGrid}>
+              {(["auto", "mobile", "desktop"] as const).map((mode) => (
+                <button
+                  key={mode}
+                  type="button"
+                  className={[
+                    styles.viewModeButton,
+                    currentViewMode === mode ? styles.viewModeButtonActive : "",
+                  ].join(" ")}
+                  onClick={() => setViewMode(mode)}
+                >
+                  {t(`mobile.viewMode.${mode}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </aside>
     </div>
   );
