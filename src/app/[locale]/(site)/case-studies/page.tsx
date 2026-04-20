@@ -9,6 +9,7 @@ import { V1DesktopShell } from "@/components/site/v1/V1DesktopShell";
 import { V1Hero } from "@/components/site/v1/V1Hero";
 import { V1Section } from "@/components/site/v1/V1Section";
 import { V1Card, V1Grid } from "@/components/site/v1/V1Cards";
+import { caseStudies } from "@/lib/caseStudies";
 
 export default async function Page(props: {
   params: Promise<{ locale: SupportedLocale }>;
@@ -42,12 +43,15 @@ export default async function Page(props: {
 
           <V1Section title={t("v1.caseStudiesPage.listTitle")}>
             <V1Grid>
-              <V1Card title={t("v1.caseStudies.items.1.title")} body={t("v1.caseStudies.items.1.body")} />
-              <V1Card title={t("v1.caseStudies.items.2.title")} body={t("v1.caseStudies.items.2.body")} />
-              <V1Card title={t("v1.caseStudies.items.3.title")} body={t("v1.caseStudies.items.3.body")} />
-              <V1Card title={t("v1.caseStudies.items.4.title")} body={t("v1.caseStudies.items.4.body")} />
-              <V1Card title={t("v1.caseStudies.items.5.title")} body={t("v1.caseStudies.items.5.body")} />
-              <V1Card title={t("v1.caseStudies.items.6.title")} body={t("v1.caseStudies.items.6.body")} />
+              {caseStudies.map((cs) => (
+                <V1Card
+                  key={cs.slug}
+                  title={t(cs.listTitleKey)}
+                  body={t(cs.listBodyKey)}
+                  href={withLocale(locale, `${routes.caseStudies}/${cs.slug}`)}
+                  ctaLabel={t("v1.cta.caseStudies")}
+                />
+              ))}
             </V1Grid>
           </V1Section>
         </V1DesktopShell>
