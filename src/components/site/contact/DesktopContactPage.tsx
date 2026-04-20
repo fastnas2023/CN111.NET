@@ -5,6 +5,7 @@ import { DesktopHeader } from "../Header/DesktopHeader";
 import { DesktopFooter } from "../Footer/DesktopFooter";
 import { ContactForm } from "./ContactForm";
 import styles from "./DesktopContactPage.module.scss";
+import { useI18n } from "@/i18n/client";
 
 const LocationIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -19,6 +20,8 @@ const PhoneIcon = () => (
 );
 
 export function DesktopContactPage() {
+  const { t } = useI18n();
+
   return (
     <div className={styles.layout}>
       <DesktopHeader />
@@ -26,8 +29,8 @@ export function DesktopContactPage() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1>Contact</h1>
-            <p>Join thought leaders, developers, researchers, and founders as we explore how artificial intelligence is reshaping industries, creativity.</p>
+            <h1>{t("contact.hero.title")}</h1>
+            <p>{t("contact.hero.lede")}</p>
           </div>
         </section>
 
@@ -35,30 +38,34 @@ export function DesktopContactPage() {
           <div className={styles.grid}>
             
             <div className={styles.infoCard}>
-              <h2>We’re here to answer your questions.</h2>
-              <p>Have a question, suggestion, or just want to say hi? We’re here and happy to hear from you!</p>
+              <h2>{t("contact.intro.title")}</h2>
+              <p>{t("contact.intro.body")}</p>
+
+              <h3 className="text-white text-xl font-semibold mb-6">
+                {t("contact.firstCall.title")}
+              </h3>
               
               <div className={styles.contactItem}>
                 <div className={styles.iconBox}><LocationIcon /></div>
                 <div className={styles.textContent}>
-                  <h4>Event Location</h4>
-                  <p>121 AI Blvd, San Francisco, BCA 94107</p>
+                  <h4>{t("contact.firstCall.items.1.title")}</h4>
+                  <p>{t("contact.firstCall.items.1.body")}</p>
                 </div>
               </div>
               
               <div className={styles.contactItem}>
                 <div className={styles.iconBox}><MailIcon /></div>
                 <div className={styles.textContent}>
-                  <h4>Send a Message</h4>
-                  <p>contact@aivent-support.com</p>
+                  <h4>{t("contact.firstCall.items.2.title")}</h4>
+                  <p>{t("contact.firstCall.items.2.body")}</p>
                 </div>
               </div>
               
               <div className={styles.contactItem}>
                 <div className={styles.iconBox}><PhoneIcon /></div>
                 <div className={styles.textContent}>
-                  <h4>Call Us Directly</h4>
-                  <p>+1 123 456 789</p>
+                  <h4>{t("contact.firstCall.items.3.title")}</h4>
+                  <p>{t("contact.firstCall.items.3.body")}</p>
                 </div>
               </div>
             </div>
