@@ -27,6 +27,20 @@
   "lang.arSA": "العربية",
   "footer.copyright": "© {year} CN111 Studio",
 
+  "v1.kicker": "PRD V1",
+  "v1.section.placeholderTitle": "Skeleton (placeholder)",
+  "v1.section.placeholderBody": "This is a V1 information architecture skeleton. Content will be filled in future iterations.",
+
+  "v1.home.hero.title": "A productized studio for Growth × AI",
+  "v1.home.hero.lede": "We combine growth strategy and AI engineering to help teams validate, ship, and scale faster.",
+  "v1.home.entrySection.title": "Choose an entry",
+  "v1.home.entry.growth.title": "B · Growth",
+  "v1.home.entry.growth.body": "For growth outcomes: strategy breakdown, experiment design, data loops, and execution.",
+  "v1.home.entry.growth.cta": "Go to /solutions",
+  "v1.home.entry.ai.title": "C · AI",
+  "v1.home.entry.ai.body": "For AI delivery: evaluation, engineering, delivery, and continuous improvement.",
+  "v1.home.entry.ai.cta": "Go to /services",
+
   "mobile.header.brandAria": "{brand} Home",
   "mobile.menu.open": "Open menu",
   "mobile.menu.close": "Close menu",

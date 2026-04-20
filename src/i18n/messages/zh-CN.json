@@ -27,6 +27,20 @@
   "lang.arSA": "العربية",
   "footer.copyright": "© {year} CN111 Studio",
 
+  "v1.kicker": "PRD V1",
+  "v1.section.placeholderTitle": "页面骨架（占位）",
+  "v1.section.placeholderBody": "这里先放页面结构与信息层级，占位内容会在后续迭代补齐。",
+
+  "v1.home.hero.title": "增长 × AI 的产品化工作室",
+  "v1.home.hero.lede": "用增长策略与 AI 工程能力，帮助企业更快验证、交付并规模化。",
+  "v1.home.entrySection.title": "选择入口",
+  "v1.home.entry.growth.title": "B · 增长版",
+  "v1.home.entry.growth.body": "面向增长目标：策略拆解、实验设计、数据闭环与落地执行。",
+  "v1.home.entry.growth.cta": "进入 /solutions",
+  "v1.home.entry.ai.title": "C · AI 版",
+  "v1.home.entry.ai.body": "面向 AI 落地：评估体系、工程化、交付与持续优化。",
+  "v1.home.entry.ai.cta": "进入 /services",
+
   "mobile.header.brandAria": "返回 {brand} 首页",
   "mobile.menu.open": "打开菜单",
   "mobile.menu.close": "关闭菜单",
