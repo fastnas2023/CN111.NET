@@ -7,7 +7,14 @@ import { withLocale } from "@/i18n/paths";
 import { V1DesktopShell } from "@/components/site/v1/V1DesktopShell";
 import { V1Hero } from "@/components/site/v1/V1Hero";
 import { V1Section } from "@/components/site/v1/V1Section";
-import { V1Card, V1Grid, V1Grid2 } from "@/components/site/v1/V1Cards";
+import { V1Card, V1Grid2 } from "@/components/site/v1/V1Cards";
+import { ProofStrip } from "@/components/site/v1/home/ProofStrip";
+import { Capabilities } from "@/components/site/v1/home/Capabilities";
+import { FeaturedCases } from "@/components/site/v1/home/FeaturedCases";
+import { PricingPreview } from "@/components/site/v1/home/PricingPreview";
+import { InsightsPreview } from "@/components/site/v1/home/InsightsPreview";
+import { FAQAccordion } from "@/components/site/v1/home/FAQAccordion";
+import { ConversionCTA } from "@/components/site/v1/home/ConversionCTA";
 
 export default async function Page(props: {
   params: Promise<{ locale: SupportedLocale }>;
@@ -35,6 +42,8 @@ export default async function Page(props: {
             }}
           />
 
+          <ProofStrip t={t} />
+
           <V1Section title={t("v1.home.entrySection.title")}>
             <V1Grid2>
               <V1Card
@@ -52,68 +61,12 @@ export default async function Page(props: {
             </V1Grid2>
           </V1Section>
 
-          <V1Section title={t("v1.home.solutions.title")}>
-            <V1Grid2>
-              <V1Card
-                title={t("v1.solutions.s1.title")}
-                body={t("v1.solutions.s1.body")}
-                href={withLocale(locale, routes.solutions)}
-                ctaLabel={t("v1.cta.learnMore")}
-              />
-              <V1Card
-                title={t("v1.solutions.s2.title")}
-                body={t("v1.solutions.s2.body")}
-                href={withLocale(locale, routes.solutions)}
-                ctaLabel={t("v1.cta.learnMore")}
-              />
-              <V1Card
-                title={t("v1.solutions.s3.title")}
-                body={t("v1.solutions.s3.body")}
-                href={withLocale(locale, routes.solutions)}
-                ctaLabel={t("v1.cta.learnMore")}
-              />
-              <V1Card
-                title={t("v1.solutions.s4.title")}
-                body={t("v1.solutions.s4.body")}
-                href={withLocale(locale, routes.solutions)}
-                ctaLabel={t("v1.cta.learnMore")}
-              />
-            </V1Grid2>
-          </V1Section>
-
-          <V1Section title={t("v1.home.cases.title")}>
-            <V1Grid>
-              <V1Card title={t("v1.home.cases.1.title")} body={t("v1.home.cases.1.body")} />
-              <V1Card title={t("v1.home.cases.2.title")} body={t("v1.home.cases.2.body")} />
-              <V1Card title={t("v1.home.cases.3.title")} body={t("v1.home.cases.3.body")} />
-            </V1Grid>
-          </V1Section>
-
-          <V1Section title={t("v1.home.process.title")}>
-            <V1Grid2>
-              <V1Card title={t("v1.home.process.1.title")} body={t("v1.home.process.1.body")} />
-              <V1Card title={t("v1.home.process.2.title")} body={t("v1.home.process.2.body")} />
-              <V1Card title={t("v1.home.process.3.title")} body={t("v1.home.process.3.body")} />
-              <V1Card title={t("v1.home.process.4.title")} body={t("v1.home.process.4.body")} />
-            </V1Grid2>
-          </V1Section>
-
-          <V1Section title={t("v1.home.finalCta.title")}>
-            <V1Grid2>
-              <V1Card
-                title={t("v1.home.finalCta.box.title")}
-                body={t("v1.home.finalCta.box.body")}
-                href={withLocale(locale, routes.book)}
-                ctaLabel={t("v1.cta.book")}
-              />
-              <V1Card
-                title={t("v1.home.finalCta.box2.title")}
-                body={t("v1.home.finalCta.box2.body")}
-                href={withLocale(locale, routes.contact)}
-                ctaLabel={t("v1.cta.contact")}
-              />
-            </V1Grid2>
-          </V1Section>
+          <Capabilities locale={locale} t={t} />
+          <FeaturedCases locale={locale} t={t} />
+          <PricingPreview locale={locale} t={t} />
+          <InsightsPreview locale={locale} t={t} />
+          <FAQAccordion t={t} />
+          <ConversionCTA locale={locale} t={t} />
         </V1DesktopShell>
       }
       mobile={<MobileHomePage />}

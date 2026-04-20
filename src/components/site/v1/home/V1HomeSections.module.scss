@@ -1,0 +1,212 @@
+.proofStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.proofItem {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 16px 14px;
+}
+
+.proofValue {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.proofLabel {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+.sectionLede {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  max-width: 78ch;
+}
+
+.sectionFooter {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.textLink:hover {
+  color: rgba(124, 58, 237, 0.96);
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pricingCard {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.03)
+    );
+  padding: 18px 18px 16px;
+}
+
+.pricingHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pricingTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.pricingBadge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricingBody {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+.pricingList {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.75;
+}
+
+.pricingList li + li {
+  margin-top: 6px;
+}
+
+.faq {
+  display: grid;
+  gap: 10px;
+}
+
+.faqItem {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px 16px;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  font-weight: 900;
+  list-style: none;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqAnswer {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+}
+
+.conversionCard {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(
+      800px 260px at 20% 20%,
+      rgba(124, 58, 237, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 260px at 80% 30%,
+      rgba(34, 211, 238, 0.14),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.03);
+  padding: 20px 20px 18px;
+}
+
+.conversionTitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.conversionBody {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  max-width: 78ch;
+}
+
+.conversionCtas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.ctaPrimary {
+  background: rgba(124, 58, 237, 0.92);
+  border: 1px solid rgba(124, 58, 237, 0.65);
+  color: #fff;
+}
+
+.ctaSecondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ctaPrimary:hover {
+  filter: brightness(1.04);
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+@media (max-width: 900px) {
+  .proofStrip,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
