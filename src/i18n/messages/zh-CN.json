@@ -111,6 +111,7 @@
   "mobile.menu.ariaLabel": "移动端菜单",
   "mobile.menu.title": "菜单",
   "mobile.menu.navAriaLabel": "移动端导航",
+  "mobile.tabBar.ariaLabel": "移动端底部导航",
   "mobile.viewMode.title": "视图模式（dev）",
   "mobile.viewMode.auto": "自动",
   "mobile.viewMode.mobile": "移动端",

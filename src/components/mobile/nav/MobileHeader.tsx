@@ -33,8 +33,9 @@ export function MobileHeader() {
             height={32}
             priority
           />
-          <span className={styles.brandText}>{t("brand.name")}</span>
         </Link>
+
+        <div className={styles.centerTitle}>{t("brand.name")}</div>
 
         <button
           type="button"

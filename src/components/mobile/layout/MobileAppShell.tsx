@@ -4,6 +4,7 @@ import React from "react";
 
 import styles from "./MobileAppShell.module.scss";
 import { MobileHeader } from "../nav/MobileHeader";
+import { MobileTabBar } from "../nav/MobileTabBar";
 import { ViewportViewModeSync } from "../ViewportViewModeSync";
 
 export type MobileAppShellProps = {
@@ -20,6 +21,7 @@ export function MobileAppShell({ children }: MobileAppShellProps) {
       <ViewportViewModeSync />
       <MobileHeader />
       <main className={styles.main}>{children}</main>
+      <MobileTabBar />
     </div>
   );
 }

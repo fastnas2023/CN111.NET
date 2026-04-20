@@ -1,0 +1,46 @@
+@import "../../../styles/mobile/tokens.scss";
+
+$tabbar-height: 62px;
+
+.root {
+  position: sticky;
+  bottom: 0;
+  z-index: 55;
+  padding-bottom: env(safe-area-inset-bottom);
+  backdrop-filter: blur(12px);
+  background: rgba(11, 15, 31, 0.86);
+  border-top: 1px solid var(--aivent-border);
+}
+
+.inner {
+  height: $tabbar-height;
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.tab {
+  min-height: $mobile-tap-min-height;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tabActive {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(124, 58, 237, 0.16);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+

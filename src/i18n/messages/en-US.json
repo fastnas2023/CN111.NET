@@ -111,6 +111,7 @@
   "mobile.menu.ariaLabel": "Mobile menu",
   "mobile.menu.title": "Menu",
   "mobile.menu.navAriaLabel": "Mobile navigation",
+  "mobile.tabBar.ariaLabel": "Mobile bottom navigation",
   "mobile.viewMode.title": "View Mode (dev)",
   "mobile.viewMode.auto": "Auto",
   "mobile.viewMode.mobile": "Mobile",
