@@ -79,6 +79,12 @@
   gap: 12px;
 }
 
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
 .card {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -117,4 +123,40 @@
   padding: 14px;
   color: rgba(255, 255, 255, 0.68);
   line-height: 1.65;
+}
+
+.ctaBanner {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(
+      520px 240px at 20% 30%,
+      rgba(124, 58, 237, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      520px 240px at 80% 20%,
+      rgba(34, 211, 238, 0.2),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.03);
+  padding: 16px 14px;
+}
+
+.ctaBannerTitle {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ctaBannerBody {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+@media (max-width: 380px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
 }
