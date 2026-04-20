@@ -10,6 +10,13 @@ import { V1Hero } from "@/components/site/v1/V1Hero";
 import { V1Section } from "@/components/site/v1/V1Section";
 import { V1Card, V1Grid2 } from "@/components/site/v1/V1Cards";
 
+const solutionDetailRoutes = {
+  s1: "/solutions/s1",
+  s2: "/solutions/s2",
+  s3: "/solutions/s3",
+  s4: "/solutions/s4",
+} as const;
+
 export default async function Page(props: {
   params: Promise<{ locale: SupportedLocale }>;
 }) {
@@ -45,26 +52,26 @@ export default async function Page(props: {
               <V1Card
                 title={t("v1.solutions.s1.title")}
                 body={t("v1.solutions.s1.body")}
-                href={withLocale(locale, routes.services)}
+                href={withLocale(locale, solutionDetailRoutes.s1)}
                 ctaLabel={t("v1.cta.learnMore")}
               />
               <V1Card
                 title={t("v1.solutions.s2.title")}
                 body={t("v1.solutions.s2.body")}
-                href={withLocale(locale, routes.resources)}
+                href={withLocale(locale, solutionDetailRoutes.s2)}
                 ctaLabel={t("v1.cta.learnMore")}
               />
               <V1Card
                 title={t("v1.solutions.s3.title")}
                 body={t("v1.solutions.s3.body")}
-                href={withLocale(locale, routes.services)}
+                href={withLocale(locale, solutionDetailRoutes.s3)}
                 ctaLabel={t("v1.cta.learnMore")}
               />
               <V1Card
                 title={t("v1.solutions.s4.title")}
                 body={t("v1.solutions.s4.body")}
-                href={withLocale(locale, routes.book)}
-                ctaLabel={t("v1.cta.book")}
+                href={withLocale(locale, solutionDetailRoutes.s4)}
+                ctaLabel={t("v1.cta.learnMore")}
               />
             </V1Grid2>
           </V1Section>
