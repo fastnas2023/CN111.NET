@@ -29,6 +29,9 @@ export function V1Card(props: {
 }
 
 export function V1Grid(props: { children: ReactNode }) {
-  return <div className={styles.grid}>{props.children}</div>;
+  return <div className={styles.grid3}>{props.children}</div>;
 }
 
+export function V1Grid2(props: { children: ReactNode }) {
+  return <div className={styles.grid2}>{props.children}</div>;
+}

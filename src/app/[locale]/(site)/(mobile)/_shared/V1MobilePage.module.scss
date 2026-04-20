@@ -6,6 +6,37 @@
   padding: 16px 0 18px;
 }
 
+.heroVisual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 18px 14px 16px;
+  background-image: url("/aivent/images/background/3.webp");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      520px 240px at 20% 30%,
+      rgba(124, 58, 237, 0.45),
+      transparent 55%
+    ),
+    radial-gradient(
+      520px 240px at 80% 20%,
+      rgba(34, 211, 238, 0.25),
+      transparent 55%
+    ),
+    linear-gradient(180deg, rgba(11, 16, 32, 0.25), rgba(11, 16, 32, 0.92));
+}
+
+.heroVisual > * {
+  position: relative;
+}
+
 .kicker {
   margin: 0 0 10px;
   font-size: 11px;
@@ -24,6 +55,13 @@
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
+}
+
+.heroCtas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .section {
@@ -80,4 +118,3 @@
   color: rgba(255, 255, 255, 0.68);
   line-height: 1.65;
 }
-
