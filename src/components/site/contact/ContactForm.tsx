@@ -46,6 +46,11 @@ export function ContactForm() {
     e.preventDefault();
     setStatus({ type: "idle" });
 
+    if (!values.budgetRange.trim()) {
+      setStatus({ type: "error", message: t("contact.form.validation.budgetRequired") });
+      return;
+    }
+
     if (!values.contactEmail.trim() && !values.contactPhone.trim()) {
       setStatus({ type: "error", message: t("contact.form.validation.contactRequired") });
       return;
@@ -159,7 +164,10 @@ export function ContactForm() {
 
           <div className="flex flex-col gap-2">
             <label htmlFor="budgetRange" className="text-sm text-white/80">
-              {t("contact.form.fields.budgetRange.label")}
+              {t("contact.form.fields.budgetRange.label")}{" "}
+              <span aria-hidden="true" className="text-red-400">
+                *
+              </span>
             </label>
             <SelectRoot
               value={values.budgetRange || undefined}
@@ -169,6 +177,7 @@ export function ContactForm() {
               <SelectTrigger
                 id="budgetRange"
                 aria-label={t("contact.form.fields.budgetRange.label")}
+                aria-required="true"
                 className="w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 rounded-none px-0 text-white hover:bg-transparent focus-visible:ring-0"
               >
                 <SelectValue placeholder={t("contact.form.fields.budgetRange.placeholder")} />
@@ -273,6 +282,10 @@ export function ContactForm() {
         >
           {submitting ? t("contact.form.submit.submitting") : t("contact.form.submit.default")}
         </Button>
+
+        <p className="text-xs text-white/60 mt-2">
+          {t("contact.form.promise")}
+        </p>
       </div>
 
       {status.type === "ok" && (
