@@ -16,14 +16,11 @@ type NavItem = { labelKey: string; href: string };
 
 const NAV_ITEMS: NavItem[] = [
   { labelKey: "nav.home", href: routes.home },
-  { labelKey: "nav.indexSlider", href: routes.indexSlider },
-  { labelKey: "nav.indexStaticBackground", href: routes.indexStaticBackground },
-  { labelKey: "nav.indexSliderText", href: routes.indexSliderText },
-  { labelKey: "nav.indexCountdown", href: routes.indexCountdown },
-  { labelKey: "nav.tickets", href: routes.tickets },
-  { labelKey: "nav.tickets2", href: routes.tickets2 },
-  { labelKey: "nav.news", href: routes.news },
-  { labelKey: "nav.newsSingle", href: routes.newsSingle },
+  { labelKey: "nav.solutions", href: routes.solutions },
+  { labelKey: "nav.services", href: routes.services },
+  { labelKey: "nav.caseStudies", href: routes.caseStudies },
+  { labelKey: "nav.resources", href: routes.resources },
+  { labelKey: "nav.about", href: routes.about },
   { labelKey: "nav.contact", href: routes.contact },
 ];
 
@@ -132,6 +129,17 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
             );
           })}
         </nav>
+
+        <div className={styles.primaryCta}>
+          <Link
+            href={withLocale(locale, routes.book)}
+            className={styles.primaryCtaLink}
+            onClick={onClose}
+          >
+            <span>{t("nav.cta.book")}</span>
+            <Icon name="chevron-right" size="sm" />
+          </Link>
+        </div>
 
         {isDev ? (
           <div className={styles.footer}>

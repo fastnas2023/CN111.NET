@@ -95,6 +95,27 @@
   border-color: rgba(124, 58, 237, 0.35);
 }
 
+.primaryCta {
+  padding: 12px 10px 0;
+}
+
+.primaryCtaLink {
+  min-height: $mobile-tap-min-height;
+  padding: 10px 12px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(124, 58, 237, 0.9);
+  border: 1px solid rgba(124, 58, 237, 0.6);
+  font-weight: 800;
+}
+
+.primaryCtaLink:active {
+  filter: brightness(0.95);
+}
+
 .footer {
   padding: 12px 14px 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
