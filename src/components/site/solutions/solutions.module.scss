@@ -1,0 +1,177 @@
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 860px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 16px 14px;
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.cardBody {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.steps {
+  display: grid;
+  gap: 14px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.stepIndex {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(124, 58, 237, 0.22);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.stepTitle {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.stepBody {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.tableWrap {
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.th,
+.td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  vertical-align: top;
+}
+
+.th {
+  text-align: left;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.td {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+}
+
+.faq {
+  display: grid;
+  gap: 12px;
+}
+
+.faqItem {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 14px;
+}
+
+.faqQ {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.faqA {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.ctaBox {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(
+      620px 280px at 20% 30%,
+      rgba(124, 58, 237, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(620px 280px at 80% 20%, rgba(34, 211, 238, 0.14), transparent 60%),
+    rgba(255, 255, 255, 0.03);
+  padding: 18px 18px 16px;
+}
+
+.ctaTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.ctaBody {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ctaPrimary {
+  background: rgba(124, 58, 237, 0.86);
+  color: white;
+}
+
+.ctaSecondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.88);
+}
+
