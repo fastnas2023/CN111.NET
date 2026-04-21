@@ -17,6 +17,7 @@ export type V1HeroProps = {
 };
 
 export function V1Hero(props: V1HeroProps) {
+  const kicker = props.kicker?.trim();
   return (
     <section className={styles.hero}>
       {props.background?.type === "video" ? (
@@ -41,7 +42,7 @@ export function V1Hero(props: V1HeroProps) {
       <div className={styles.overlay} />
 
       <div className={styles.container}>
-        <p className={styles.kicker}>{props.kicker}</p>
+        {kicker ? <p className={styles.kicker}>{kicker}</p> : null}
         <h1 className={styles.title}>{props.title}</h1>
         <p className={styles.lede}>{props.lede}</p>
 
@@ -59,4 +60,3 @@ export function V1Hero(props: V1HeroProps) {
     </section>
   );
 }
-
