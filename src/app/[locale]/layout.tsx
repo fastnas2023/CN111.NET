@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 import "../globals.scss";
 import "banli-ui/styles.css";
@@ -61,6 +62,12 @@ export default async function LocaleLayout({
     // 导致 dev 环境出现 hydration mismatch 提示。这里对根节点显式 suppress。
     <html lang={locale} dir={getHtmlDir(locale)} suppressHydrationWarning>
       <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2919723414903832"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <AiventHeadAssets />
       </head>
       {/* SSR 直接带上 dark-scheme，避免首屏“闪白”（跑马灯露白） */}
